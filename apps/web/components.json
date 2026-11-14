@@ -14,8 +14,8 @@
     "components": "@/components",
     "hooks": "@/hooks",
     "lib": "@/lib",
-    "utils": "@nawej/ui/lib/utils",
-    "ui": "@nawej/ui/components"
+    "utils": "@nawet/ui/lib/utils",
+    "ui": "@nawet/ui/components"
   },
   "rtl": true,
   "menuColor": "default",

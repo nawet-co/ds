@@ -11,11 +11,11 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@nawej/ui/components",
-    "utils": "@nawej/ui/lib/utils",
-    "hooks": "@nawej/ui/hooks",
-    "lib": "@nawej/ui/lib",
-    "ui": "@nawej/ui/components"
+    "components": "@nawet/ui/components",
+    "utils": "@nawet/ui/lib/utils",
+    "hooks": "@nawet/ui/hooks",
+    "lib": "@nawet/ui/lib",
+    "ui": "@nawet/ui/components"
   },
   "rtl": true,
   "menuColor": "default",

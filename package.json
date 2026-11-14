@@ -19,8 +19,8 @@
     "destroy": "vp run --filter @nawet/infra destroy",
     "env:generate": "varlock codegen --path ./apps/web/",
     "postinstall": "varlock codegen --path ./apps/web/",
-    "fix": "ultracite fix",
-    "clean:lockfile": "pnpm clean --lockfile && pnpm install"
+    "clean:lockfile": "pnpm clean --lockfile && pnpm install",
+    "fix": "ultracite fix"
   },
   "dependencies": {
     "zod": "catalog:"
@@ -38,5 +38,5 @@
     "varlock": "catalog:",
     "vite-plus": "1.4.0"
   },
-  "packageManager": "pnpm@11.8.0"
+  "packageManager": "pnpm@12.18.0"
 }
