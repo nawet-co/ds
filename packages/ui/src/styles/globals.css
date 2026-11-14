@@ -5,9 +5,11 @@
 @import "@fontsource-variable/montserrat";
 
 @custom-variant dark (&:is(.dark *));
-@source "../../../apps/**/*.{ts,tsx,astro}";
-@source "../../../components/**/*.{ts,tsx}";
 @source "../**/*.{ts,tsx}";
+/*
+ * Consumers must add their own @source for their app files, e.g.:
+ *   @source "../../apps/web/src/**\/*.{ts,tsx,astro}";
+ */
 
 :root {
     --background: oklch(1 0 0);
