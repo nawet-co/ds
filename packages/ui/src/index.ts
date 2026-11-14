@@ -15,3 +15,4 @@
 // Re-export types from lib
 export type { TransitionPreset } from "./lib/motion"
 export type { ColorToken, RadiusToken } from "./lib/tokens"
+export type { UseControllableOptions } from "./hooks/use-controllable"

@@ -8,6 +8,13 @@ Nawet DS is a custom [shadcn](https://ui.shadcn.com/) registry of composable, ac
 
 Rather than generic defaults, Nawet DS delivers an opinionated collection of building blocks that cut boilerplate without compromising flexibility, responsive behavior, or design fidelity.
 
+## Requirements
+
+- React 19+
+- [React Compiler](https://react.dev/learn/react-compiler) enabled in the consuming app.
+
+Registry code should not add manual `useMemo` / `useCallback` — memoization is the compiler's responsibility, not the component's.
+
 ## Documentation
 
 Explore the components and registry at [nawet-ds.abbes.dev](https://nawet-ds.abbes.dev).
