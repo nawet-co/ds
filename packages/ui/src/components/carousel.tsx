@@ -5,7 +5,7 @@ import useEmblaCarousel, {
 } from "embla-carousel-react"
 
 import { Button } from "@nawet/ui/components/button"
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
+import { Icons } from "@nawet/ui/icons"
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -193,7 +193,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeftIcon className="rtl:rotate-180" />
+      <Icons.chevronLeft className="rtl:rotate-180" />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -223,7 +223,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRightIcon className="rtl:rotate-180" />
+      <Icons.chevronRight className="rtl:rotate-180" />
       <span className="sr-only">Next slide</span>
     </Button>
   )

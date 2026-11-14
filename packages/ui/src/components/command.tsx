@@ -13,7 +13,7 @@ import {
   InputGroup,
   InputGroupAddon,
 } from "@nawet/ui/components/input-group"
-import { SearchIcon, CheckIcon } from "lucide-react"
+import { Icons } from "@nawet/ui/icons"
 
 function Command({
   className,
@@ -80,7 +80,7 @@ function CommandInput({
           {...props}
         />
         <InputGroupAddon>
-          <SearchIcon className="size-4 shrink-0 opacity-50" />
+          <Icons.search className="size-4 shrink-0 opacity-50" />
         </InputGroupAddon>
       </InputGroup>
     </div>
@@ -160,7 +160,7 @@ function CommandItem({
       {...props}
     >
       {children}
-      <CheckIcon className="ms-auto opacity-0 group-has-data-[slot=command-shortcut]/command-item:hidden group-data-[checked=true]/command-item:opacity-100" />
+      <Icons.check className="ms-auto opacity-0 group-has-data-[slot=command-shortcut]/command-item:hidden group-data-[checked=true]/command-item:opacity-100" />
     </CommandPrimitive.Item>
   )
 }

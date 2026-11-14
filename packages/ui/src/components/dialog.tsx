@@ -5,7 +5,7 @@ import { Dialog as DialogPrimitive } from "@base-ui/react/dialog"
 import { cn } from "cn"
 
 import { Button } from "@nawet/ui/components/button"
-import { XIcon } from "lucide-react"
+import { Icons } from "@nawet/ui/icons"
 
 function Dialog({ ...props }: DialogPrimitive.Root.Props) {
   return <DialogPrimitive.Root data-slot="dialog" {...props} />
@@ -70,8 +70,7 @@ function DialogContent({
               />
             }
           >
-            <XIcon
-            />
+            <Icons.close />
             <span className="sr-only">Close</span>
           </DialogPrimitive.Close>
         )}

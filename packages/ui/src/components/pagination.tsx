@@ -2,7 +2,7 @@ import * as React from "react"
 import { cn } from "cn"
 
 import { Button } from "@nawet/ui/components/button"
-import { ChevronLeftIcon, ChevronRightIcon, MoreHorizontalIcon } from "lucide-react"
+import { Icons } from "@nawet/ui/icons"
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
   return (
@@ -74,7 +74,7 @@ function PaginationPrevious({
       className={cn("ps-2!", className)}
       {...props}
     >
-      <ChevronLeftIcon data-icon="inline-start" className="rtl:rotate-180" />
+      <Icons.chevronLeft data-icon="inline-start" className="rtl:rotate-180" />
       <span className="hidden sm:block">{text}</span>
     </PaginationLink>
   )
@@ -93,7 +93,7 @@ function PaginationNext({
       {...props}
     >
       <span className="hidden sm:block">{text}</span>
-      <ChevronRightIcon data-icon="inline-end" className="rtl:rotate-180" />
+      <Icons.chevronRight data-icon="inline-end" className="rtl:rotate-180" />
     </PaginationLink>
   )
 }
@@ -112,8 +112,7 @@ function PaginationEllipsis({
       )}
       {...props}
     >
-      <MoreHorizontalIcon
-      />
+      <Icons.moreHorizontal />
       <span className="sr-only">More pages</span>
     </span>
   )

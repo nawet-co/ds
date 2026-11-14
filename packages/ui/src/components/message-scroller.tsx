@@ -8,7 +8,7 @@ import {
 import { cn } from "cn"
 
 import { Button } from "@nawet/ui/components/button"
-import { ArrowDownIcon } from "lucide-react"
+import { Icons } from "@nawet/ui/icons"
 
 function MessageScrollerProvider(
   props: React.ComponentProps<typeof MessageScrollerPrimitive.Provider>
@@ -105,8 +105,7 @@ function MessageScrollerButton({
     >
       {children ?? (
         <>
-          <ArrowDownIcon
-          />
+          <Icons.arrowDown />
           <span className="sr-only">
             {direction === "end" ? "Scroll to end" : "Scroll to start"}
           </span>

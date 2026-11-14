@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Menu as MenuPrimitive } from "@base-ui/react/menu"
 import { cn } from "cn"
-import { ChevronRightIcon, CheckIcon } from "lucide-react"
+import { Icons } from "@nawet/ui/icons"
 
 function DropdownMenu({ ...props }: MenuPrimitive.Root.Props) {
   return <MenuPrimitive.Root data-slot="dropdown-menu" {...props} />
@@ -116,7 +116,7 @@ function DropdownMenuSubTrigger({
       {...props}
     >
       {children}
-      <ChevronRightIcon className="rtl:rotate-180 ms-auto" />
+      <Icons.chevronRight className="rtl:rotate-180 ms-auto" />
     </MenuPrimitive.SubmenuTrigger>
   )
 }
@@ -167,8 +167,7 @@ function DropdownMenuCheckboxItem({
         data-slot="dropdown-menu-checkbox-item-indicator"
       >
         <MenuPrimitive.CheckboxItemIndicator>
-          <CheckIcon
-          />
+          <Icons.check />
         </MenuPrimitive.CheckboxItemIndicator>
       </span>
       {children}
@@ -208,8 +207,7 @@ function DropdownMenuRadioItem({
         data-slot="dropdown-menu-radio-item-indicator"
       >
         <MenuPrimitive.RadioItemIndicator>
-          <CheckIcon
-          />
+          <Icons.check />
         </MenuPrimitive.RadioItemIndicator>
       </span>
       {children}

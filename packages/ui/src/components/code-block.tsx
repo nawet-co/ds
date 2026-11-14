@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "cn"
 
 import { Button } from "@nawet/ui/components/button"
-import { CheckIcon, CopyIcon } from "lucide-react"
+import { Icons } from "@nawet/ui/icons"
 
 const codeBlockVariants = cva(
   "group/code-block relative flex w-full min-w-0 flex-col overflow-hidden rounded-2xl text-sm has-[>[data-slot=code-block-content]:focus-visible]:ring-3 has-[>[data-slot=code-block-content]:focus-visible]:ring-ring/30 data-[size=sm]:rounded-xl data-[size=sm]:text-xs",
@@ -125,11 +125,9 @@ function CodeBlockCopyButton({
         {...props}
       >
         {copied ? (
-          <CheckIcon
-          />
+          <Icons.check />
         ) : (
-          <CopyIcon
-          />
+          <Icons.copy />
         )}
       </Button>
       <span aria-live="polite" className="sr-only">

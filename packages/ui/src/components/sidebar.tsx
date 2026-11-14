@@ -21,7 +21,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@nawet/ui/components/tooltip"
-import { PanelLeftIcon } from "lucide-react"
+import { Icons } from "@nawet/ui/icons"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -269,7 +269,7 @@ function SidebarTrigger({
       }}
       {...props}
     >
-      <PanelLeftIcon className="rtl:rotate-180" />
+      <Icons.sidebarToggle className="rtl:rotate-180" />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   )
