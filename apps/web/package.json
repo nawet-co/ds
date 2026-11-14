@@ -13,6 +13,7 @@
     "@astrojs/react": "^7.1.8",
     "@nawet/ui": "workspace:*",
     "astro": "^7.3.1",
+    "motion": "*",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "varlock": "catalog:",

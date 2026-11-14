@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { RevenueChart } from "../components/revenue-chart";
-
+import { PopoverDemo } from "../components/popover-demo";
 ---
 
 <Layout title="nawet">
@@ -9,7 +9,7 @@ import { RevenueChart } from "../components/revenue-chart";
     <pre class="overflow-x-auto font-mono text-sm text-white pt-8">NAWET DS</pre>
     <div class="grid gap-6 pt-8">
       <RevenueChart client:load />
+      <PopoverDemo client:load />
     </div>
   </div>
 </Layout>
-

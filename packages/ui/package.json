@@ -4,7 +4,6 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -36,7 +35,6 @@
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "globals": "^17",
     "tailwindcss": "^4",
     "typescript": "~6.0.2"
   },
