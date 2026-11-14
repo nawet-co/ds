@@ -204,4 +204,6 @@ export {
   AttachmentActions,
   AttachmentAction,
   AttachmentTrigger,
+  attachmentVariants,
+  attachmentMediaVariants,
 }

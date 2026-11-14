@@ -247,4 +247,6 @@ export {
   CodeBlockContent,
   CodeBlockLine,
   CodeBlockFooter,
+  codeBlockVariants,
+  codeBlockLineVariants,
 }
