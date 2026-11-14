@@ -14,8 +14,8 @@ const config: KnipConfig = {
       ],
     },
 
-    // Astro web app
-    "apps/web": {
+    // Astro showcase app (public design system gallery)
+    "apps/showcase": {
       entry: [
         "src/pages/**/*.{astro,ts,tsx}",
         "src/layouts/**/*.astro",

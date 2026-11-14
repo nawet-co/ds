@@ -8,7 +8,7 @@
 @source "../**/*.{ts,tsx}";
 /*
  * Consumers must add their own @source for their app files, e.g.:
- *   @source "../../apps/web/src/**\/*.{ts,tsx,astro}";
+ *   @source "../../apps/showcase/src/**\/*.{ts,tsx,astro}";
  */
 
 :root {

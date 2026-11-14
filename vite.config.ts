@@ -5,8 +5,8 @@ export default defineConfig({
     ignorePatterns: [
       "node_modules/**",
       "**/node_modules/**",
-      "apps/web/dist/**",
-      "apps/web/.astro/**",
+      "apps/showcase/dist/**",
+      "apps/showcase/.astro/**",
       ".alchemy/**",
       ".wrangler/**",
       "**/.wrangler/**",
@@ -20,8 +20,8 @@ export default defineConfig({
     ignorePatterns: [
       "node_modules/**",
       "**/node_modules/**",
-      "apps/web/dist/**",
-      "apps/web/.astro/**",
+      "apps/showcase/dist/**",
+      "apps/showcase/.astro/**",
       ".alchemy/**",
       ".wrangler/**",
       "**/.wrangler/**",

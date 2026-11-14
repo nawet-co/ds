@@ -10,8 +10,8 @@ export default Alchemy.Stack(
     state: Cloudflare.state(),
   },
   Effect.gen(function* () {
-    const webWorker = yield* Cloudflare.Website.Astro("web", {
-      rootDir: "../../apps/web",
+    const showcaseWorker = yield* Cloudflare.Website.Astro("showcase", {
+      rootDir: "../../apps/showcase",
       env: {
         SESSION: Cloudflare.KV.Namespace("session"),
         IMAGES: Cloudflare.Images.Images(),
@@ -22,7 +22,7 @@ export default Alchemy.Stack(
     });
 
     return {
-      web: webWorker.url,
+      showcase: showcaseWorker.url,
     };
   }),
 );

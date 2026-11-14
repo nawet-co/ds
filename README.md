@@ -8,6 +8,12 @@ Nawet DS is a custom [shadcn](https://ui.shadcn.com/) registry of composable, ac
 
 Rather than generic defaults, Nawet DS delivers an opinionated collection of building blocks that cut boilerplate without compromising flexibility, responsive behavior, or design fidelity.
 
+## Repository scope
+
+This repository is public. It contains the design system source (`packages/ui`), the registry build, and the public showcase app (`apps/showcase`).
+
+The Nawet marketing site is maintained in a separate private repository and consumes the published registry. It is intentionally not part of this workspace.
+
 ## Requirements
 
 - React 19+
