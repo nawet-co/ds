@@ -46,7 +46,6 @@ bunx ultracite init \
   --editors universal \
   --agents claude copilot \
   --frameworks react next \
-  --integrations husky lint-staged \
   --yes
 ```
 
@@ -57,7 +56,7 @@ bunx ultracite init \
 - `--editors` — `universal` (writes `.vscode/settings.json` for every VS Code-based editor) | `vscode` | `cursor` | `devin` | `codebuddy` | `antigravity` | `bob` | `kiro` | `trae` | `void` | `zed`
 - `--agents` — every choice writes the rules to `AGENTS.md`. `universal` writes only that; `claude`, `gemini`, `aider` and `replit` also add the import, settings or copy that agent needs to read them; IDs like `codex`, `copilot`, `cline`, `amp` and `cursor-cli` (40 agents supported) need nothing more
 - `--frameworks` — `react` | `next` | `solid` | `vue` | `svelte` | `qwik` | `remix` | `tanstack` | `angular` | `astro` | `nestjs` | `jest` | `vitest` | `cypress` | `storybook` | `playwright` | `react-native` | `drizzle`
-- `--integrations` — `husky` | `lefthook` | `lint-staged` | `pre-commit`
+- `--integrations` — `lefthook` | `lint-staged` | `pre-commit`
 - `--hooks` — Enable auto-fix hooks: `claude` | `codex` | `copilot` | `cursor` | `devin` | `codebuddy` | `deepagents` | `grok`
 - `--js-plugins` — Opt-in Oxlint JS plugins: `@shadcn/lint` | `anti-slop` | `eslint-plugin-github` | `eslint-plugin-jsdoc` | `eslint-plugin-sonarjs` | `eslint-plugin-tsdoc` | `oxlint-plugin-react-doctor`
 - `--type-aware` — Enable type-aware linting (ESLint and Biome: extend their `type-aware` preset; Oxlint: installs `oxlint-tsgolint` and sets `typeAware`), and turn on `strictNullChecks` in tsconfig files

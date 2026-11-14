@@ -1,5 +1,5 @@
 {
-  "name": "design-system",
+  "name": "nawet",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -15,21 +15,20 @@
     "format": "vp fmt",
     "staged": "vp staged",
     "dev:web": "vp run --filter web dev:bare",
-    "deploy": "vp run --filter @design-system/infra deploy",
-    "destroy": "vp run --filter @design-system/infra destroy",
+    "deploy": "vp run --filter @nawet/infra deploy",
+    "destroy": "vp run --filter @nawet/infra destroy",
     "env:generate": "varlock codegen --path ./apps/web/",
     "postinstall": "varlock codegen --path ./apps/web/",
     "fix": "ultracite fix",
-    "prepare": "husky"
+    "clean:lockfile": "pnpm clean --lockfile && pnpm install"
   },
   "dependencies": {
     "zod": "catalog:"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "catalog:",
-    "@design-system/config": "workspace:*",
+    "@nawet/config": "workspace:*",
     "@types/node": "^26.4.1",
-    "husky": "latest",
     "lefthook": "latest",
     "oxfmt": "^0.71.0",
     "oxlint": "^1.86.0",

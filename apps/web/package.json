@@ -10,6 +10,7 @@
     "env:generate": "varlock codegen"
   },
   "dependencies": {
+    "@nawet/ui": "workspace:*",
     "astro": "^7.3.1",
     "varlock": "catalog:",
     "zod": "catalog:"
@@ -18,7 +19,7 @@
     "@alchemy.run/frontend-frameworks": "2.0.0-beta.84",
     "@astrojs/check": "^0.9.10",
     "@cloudflare/workers-types": "catalog:",
-    "@design-system/config": "workspace:*",
+    "@nawet/config": "workspace:*",
     "@tailwindcss/vite": "^4.3.3",
     "tailwindcss": "^4.3.3",
     "typescript": "catalog:"

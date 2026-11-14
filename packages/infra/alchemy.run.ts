@@ -4,7 +4,7 @@ import * as Effect from "effect/Effect";
 import "varlock/auto-load";
 
 export default Alchemy.Stack(
-  "design-system",
+  "nawet",
   {
     providers: Cloudflare.providers(),
     state: Cloudflare.state(),
