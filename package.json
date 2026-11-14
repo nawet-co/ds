@@ -1,6 +1,7 @@
 {
   "name": "@nawet/design-system",
   "private": true,
+  "repository": "github:nawet-co/design-system",
   "workspaces": [
     "apps/*",
     "packages/*"
