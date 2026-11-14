@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
+import { Providers } from "@nawet/ui/components/providers";
 
 interface Props {
   title?: string;
@@ -19,7 +20,9 @@ const { title = "NAWET DS" } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="min-h-screen bg-neutral-950 text-white">
-    <Header />
-    <slot />
+    <Providers client:load>
+      <Header />
+      <slot />
+    </Providers>
   </body>
 </html>

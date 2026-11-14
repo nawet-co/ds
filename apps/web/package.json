@@ -10,8 +10,11 @@
     "env:generate": "varlock codegen"
   },
   "dependencies": {
+    "@astrojs/react": "^7.1.8",
     "@nawet/ui": "workspace:*",
     "astro": "^7.3.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "varlock": "catalog:",
     "zod": "catalog:"
   },
@@ -21,6 +24,8 @@
     "@cloudflare/workers-types": "catalog:",
     "@nawet/config": "workspace:*",
     "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "tailwindcss": "^4.3.3",
     "typescript": "catalog:"
   }
