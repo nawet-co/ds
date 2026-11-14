@@ -1,0 +1,16 @@
+packages:
+  - apps/*
+  - packages/*
+allowBuilds:
+  esbuild: true
+  sharp: true
+  msgpackr-extract: true
+  workerd: true
+  lefthook: true
+overrides:
+  vite@*: npm:@voidzero-dev/vite-plus-core@1.4.0
+catalog:
+  zod: ^4.5.4
+  typescript: ^6.0.3
+  varlock: 1.23.0
+  "@cloudflare/workers-types": ^5.20260906.1
