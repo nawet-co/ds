@@ -20,7 +20,9 @@
     "env:generate": "varlock codegen --path ./apps/web/",
     "postinstall": "varlock codegen --path ./apps/web/",
     "clean:lockfile": "pnpm clean --lockfile && pnpm install",
-    "fix": "ultracite fix"
+    "deps:update": "pnpm up -r -L",
+    "fix": "ultracite fix",
+    "knip": "knip"
   },
   "dependencies": {
     "zod": "catalog:"
@@ -36,7 +38,8 @@
     "typescript": "catalog:",
     "ultracite": "8.0.0",
     "varlock": "catalog:",
-    "vite-plus": "1.4.0"
+    "vite-plus": "1.4.0",
+    "knip": "^6.44.1"
   },
   "packageManager": "pnpm@12.18.0"
 }

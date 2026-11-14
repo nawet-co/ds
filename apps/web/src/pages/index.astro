@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { RevenueChart } from "../components/revenue-chart";
 
 ---
 
 <Layout title="nawet">
   <div class="container mx-auto max-w-3xl px-4 py-2">
-    <pre class="overflow-x-auto font-mono text-sm text-white">NAWET DS</pre>
-    <div class="grid gap-6">
+    <pre class="overflow-x-auto font-mono text-sm text-white pt-8">NAWET DS</pre>
+    <div class="grid gap-6 pt-8">
+      <RevenueChart client:load />
     </div>
   </div>
 </Layout>
