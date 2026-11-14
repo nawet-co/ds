@@ -27,6 +27,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "oxc-transform-react": "^0.158.0",
     "tailwindcss": "^4.3.3",
     "typescript": "catalog:"
   }
