@@ -50,6 +50,7 @@ function Toast({ className, ...props }: ToastPrimitive.Root.Props) {
         "data-expanded:data-ending-style:data-[swipe-direction=left]:[transform:translateX(calc(var(--toast-swipe-movement-x)-150%))_translateY(var(--offset-y))]",
         "data-expanded:data-ending-style:data-[swipe-direction=right]:[transform:translateX(calc(var(--toast-swipe-movement-x)+150%))_translateY(var(--offset-y))]",
         "data-expanded:data-ending-style:data-[swipe-direction=up]:[transform:translateY(calc(var(--toast-swipe-movement-y)-150%))]",
+        "data-[type=success]:border-success/30 data-[type=warning]:border-warning/30 data-[type=info]:border-info/30 data-[type=error]:border-destructive/30",
         className
       )}
       {...props}
@@ -137,19 +138,19 @@ function ToastIcon({ type }: { type: string | undefined }) {
 
   if (type === "success") {
     icon = (
-      <Icons.success aria-hidden="true" />
+      <Icons.success className="text-success" aria-hidden="true" />
     )
   }
 
   if (type === "info") {
     icon = (
-      <Icons.info aria-hidden="true" />
+      <Icons.info className="text-info" aria-hidden="true" />
     )
   }
 
   if (type === "warning") {
     icon = (
-      <Icons.warning aria-hidden="true" />
+      <Icons.warning className="text-warning" aria-hidden="true" />
     )
   }
 
