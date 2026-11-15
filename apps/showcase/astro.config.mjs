@@ -50,7 +50,7 @@ export default defineConfig({
       alias: [
         {
           find: /^@\/components\/ui\/(?<path>.*)$/u,
-          replacement: `${uiSrc}/components/$1`,
+          replacement: `${uiSrc}/components/nawet/$1`,
         },
         {
           find: /^@\/components\/(?<path>.*)$/u,
@@ -60,7 +60,10 @@ export default defineConfig({
           find: /^@\/hooks\/(?<path>.*)$/u,
           replacement: `${uiSrc}/hooks/$1`,
         },
-        { find: /^@\/lib\/icons$/u, replacement: `${uiSrc}/icons.tsx` },
+        {
+          find: /^@\/lib\/icons$/u,
+          replacement: `${uiSrc}/lib/nawet/icons.tsx`,
+        },
         {
           find: /^@\/lib\/(?<path>.*)$/u,
           replacement: `${uiSrc}/lib/$1`,

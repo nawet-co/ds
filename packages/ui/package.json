@@ -12,11 +12,12 @@
       "types": "./src/index.ts"
     },
     "./globals.css": "./src/styles/globals.css",
-    "./icons": "./src/icons.tsx",
-    "./lib/highlighter": "./src/lib/highlighter.tsx",
-    "./lib/*": "./src/lib/*.ts",
-    "./components/*": "./src/components/*.tsx",
-    "./hooks/*": "./src/hooks/*.ts",
+    "./icons": "./src/lib/nawet/icons.tsx",
+    "./lib/highlighter": "./src/lib/nawet/highlighter.tsx",
+    "./lib/icons": "./src/lib/nawet/icons.tsx",
+    "./lib/*": "./src/lib/nawet/*.ts",
+    "./components/*": "./src/components/nawet/*.tsx",
+    "./hooks/*": "./src/hooks/nawet/*.ts",
     "./package.json": "./package.json"
   },
   "scripts": {

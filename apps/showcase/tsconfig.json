@@ -6,10 +6,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/components/ui/*": ["../../packages/ui/src/components/*"],
+      "@/components/ui/*": ["../../packages/ui/src/components/nawet/*"],
       "@/components/*": ["../../packages/ui/src/components/*"],
       "@/hooks/*": ["../../packages/ui/src/hooks/*"],
-      "@/lib/icons": ["../../packages/ui/src/icons.tsx"],
+      "@/lib/icons": ["../../packages/ui/src/lib/nawet/icons.tsx"],
       "@/lib/*": ["../../packages/ui/src/lib/*"]
     },
     "jsx": "react-jsx",

@@ -10,10 +10,10 @@
     "noEmit": true,
     "paths": {
       "@nawet/ui/*": ["./src/*"],
-      "@/components/ui/*": ["./src/components/*"],
+      "@/components/ui/*": ["./src/components/nawet/*"],
       "@/components/*": ["./src/components/*"],
       "@/hooks/*": ["./src/hooks/*"],
-      "@/lib/icons": ["./src/icons.tsx"],
+      "@/lib/icons": ["./src/lib/nawet/icons.tsx"],
       "@/lib/*": ["./src/lib/*"]
     }
   },

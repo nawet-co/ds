@@ -8,9 +8,9 @@
       "description": "Nawet DS Accordion component.",
       "files": [
         {
-          "path": "packages/ui/src/components/accordion.tsx",
+          "path": "packages/ui/src/components/nawet/accordion.tsx",
           "type": "registry:ui",
-          "target": "@ui/accordion.tsx"
+          "target": "@components/nawet/accordion.tsx"
         }
       ],
       "name": "accordion",
@@ -28,9 +28,9 @@
       "description": "Nawet DS Alert Dialog component.",
       "files": [
         {
-          "path": "packages/ui/src/components/alert-dialog.tsx",
+          "path": "packages/ui/src/components/nawet/alert-dialog.tsx",
           "type": "registry:ui",
-          "target": "@ui/alert-dialog.tsx"
+          "target": "@components/nawet/alert-dialog.tsx"
         }
       ],
       "name": "alert-dialog",
@@ -49,9 +49,9 @@
       "description": "Nawet DS Alert component.",
       "files": [
         {
-          "path": "packages/ui/src/components/alert.tsx",
+          "path": "packages/ui/src/components/nawet/alert.tsx",
           "type": "registry:ui",
-          "target": "@ui/alert.tsx"
+          "target": "@components/nawet/alert.tsx"
         }
       ],
       "name": "alert",
@@ -65,9 +65,9 @@
       "description": "Nawet DS Aspect Ratio component.",
       "files": [
         {
-          "path": "packages/ui/src/components/aspect-ratio.tsx",
+          "path": "packages/ui/src/components/nawet/aspect-ratio.tsx",
           "type": "registry:ui",
-          "target": "@ui/aspect-ratio.tsx"
+          "target": "@components/nawet/aspect-ratio.tsx"
         }
       ],
       "name": "aspect-ratio",
@@ -81,9 +81,9 @@
       "description": "Nawet DS Attachment component.",
       "files": [
         {
-          "path": "packages/ui/src/components/attachment.tsx",
+          "path": "packages/ui/src/components/nawet/attachment.tsx",
           "type": "registry:ui",
-          "target": "@ui/attachment.tsx"
+          "target": "@components/nawet/attachment.tsx"
         }
       ],
       "name": "attachment",
@@ -101,9 +101,9 @@
       "description": "Nawet DS Avatar component.",
       "files": [
         {
-          "path": "packages/ui/src/components/avatar.tsx",
+          "path": "packages/ui/src/components/nawet/avatar.tsx",
           "type": "registry:ui",
-          "target": "@ui/avatar.tsx"
+          "target": "@components/nawet/avatar.tsx"
         }
       ],
       "name": "avatar",
@@ -117,9 +117,9 @@
       "description": "Nawet DS Badge component.",
       "files": [
         {
-          "path": "packages/ui/src/components/badge.tsx",
+          "path": "packages/ui/src/components/nawet/badge.tsx",
           "type": "registry:ui",
-          "target": "@ui/badge.tsx"
+          "target": "@components/nawet/badge.tsx"
         }
       ],
       "name": "badge",
@@ -133,9 +133,9 @@
       "description": "Nawet DS Breadcrumb component.",
       "files": [
         {
-          "path": "packages/ui/src/components/breadcrumb.tsx",
+          "path": "packages/ui/src/components/nawet/breadcrumb.tsx",
           "type": "registry:ui",
-          "target": "@ui/breadcrumb.tsx"
+          "target": "@components/nawet/breadcrumb.tsx"
         }
       ],
       "name": "breadcrumb",
@@ -153,9 +153,9 @@
       "description": "Nawet DS Bubble component.",
       "files": [
         {
-          "path": "packages/ui/src/components/bubble.tsx",
+          "path": "packages/ui/src/components/nawet/bubble.tsx",
           "type": "registry:ui",
-          "target": "@ui/bubble.tsx"
+          "target": "@components/nawet/bubble.tsx"
         }
       ],
       "name": "bubble",
@@ -169,9 +169,9 @@
       "description": "Nawet DS Button Group component.",
       "files": [
         {
-          "path": "packages/ui/src/components/button-group.tsx",
+          "path": "packages/ui/src/components/nawet/button-group.tsx",
           "type": "registry:ui",
-          "target": "@ui/button-group.tsx"
+          "target": "@components/nawet/button-group.tsx"
         }
       ],
       "name": "button-group",
@@ -189,9 +189,9 @@
       "description": "Nawet DS Button component.",
       "files": [
         {
-          "path": "packages/ui/src/components/button.tsx",
+          "path": "packages/ui/src/components/nawet/button.tsx",
           "type": "registry:ui",
-          "target": "@ui/button.tsx"
+          "target": "@components/nawet/button.tsx"
         }
       ],
       "name": "button",
@@ -205,9 +205,9 @@
       "description": "Nawet DS Calendar component.",
       "files": [
         {
-          "path": "packages/ui/src/components/calendar.tsx",
+          "path": "packages/ui/src/components/nawet/calendar.tsx",
           "type": "registry:ui",
-          "target": "@ui/calendar.tsx"
+          "target": "@components/nawet/calendar.tsx"
         }
       ],
       "name": "calendar",
@@ -226,9 +226,9 @@
       "description": "Nawet DS Card component.",
       "files": [
         {
-          "path": "packages/ui/src/components/card.tsx",
+          "path": "packages/ui/src/components/nawet/card.tsx",
           "type": "registry:ui",
-          "target": "@ui/card.tsx"
+          "target": "@components/nawet/card.tsx"
         }
       ],
       "name": "card",
@@ -242,9 +242,9 @@
       "description": "Nawet DS Carousel component.",
       "files": [
         {
-          "path": "packages/ui/src/components/carousel.tsx",
+          "path": "packages/ui/src/components/nawet/carousel.tsx",
           "type": "registry:ui",
-          "target": "@ui/carousel.tsx"
+          "target": "@components/nawet/carousel.tsx"
         }
       ],
       "name": "carousel",
@@ -263,9 +263,9 @@
       "description": "Nawet DS Chart component.",
       "files": [
         {
-          "path": "packages/ui/src/components/chart.tsx",
+          "path": "packages/ui/src/components/nawet/chart.tsx",
           "type": "registry:ui",
-          "target": "@ui/chart.tsx"
+          "target": "@components/nawet/chart.tsx"
         }
       ],
       "name": "chart",
@@ -279,9 +279,9 @@
       "description": "Nawet DS Checkbox component.",
       "files": [
         {
-          "path": "packages/ui/src/components/checkbox.tsx",
+          "path": "packages/ui/src/components/nawet/checkbox.tsx",
           "type": "registry:ui",
-          "target": "@ui/checkbox.tsx"
+          "target": "@components/nawet/checkbox.tsx"
         }
       ],
       "name": "checkbox",
@@ -299,9 +299,9 @@
       "description": "Nawet DS Code Block component.",
       "files": [
         {
-          "path": "packages/ui/src/components/code-block.tsx",
+          "path": "packages/ui/src/components/nawet/code-block.tsx",
           "type": "registry:ui",
-          "target": "@ui/code-block.tsx"
+          "target": "@components/nawet/code-block.tsx"
         }
       ],
       "name": "code-block",
@@ -320,9 +320,9 @@
       "description": "Nawet DS Collapsible component.",
       "files": [
         {
-          "path": "packages/ui/src/components/collapsible.tsx",
+          "path": "packages/ui/src/components/nawet/collapsible.tsx",
           "type": "registry:ui",
-          "target": "@ui/collapsible.tsx"
+          "target": "@components/nawet/collapsible.tsx"
         }
       ],
       "name": "collapsible",
@@ -336,9 +336,9 @@
       "description": "Nawet DS Combobox component.",
       "files": [
         {
-          "path": "packages/ui/src/components/combobox.tsx",
+          "path": "packages/ui/src/components/nawet/combobox.tsx",
           "type": "registry:ui",
-          "target": "@ui/combobox.tsx"
+          "target": "@components/nawet/combobox.tsx"
         }
       ],
       "name": "combobox",
@@ -359,9 +359,9 @@
       "description": "Nawet DS Command component.",
       "files": [
         {
-          "path": "packages/ui/src/components/command.tsx",
+          "path": "packages/ui/src/components/nawet/command.tsx",
           "type": "registry:ui",
-          "target": "@ui/command.tsx"
+          "target": "@components/nawet/command.tsx"
         }
       ],
       "name": "command",
@@ -381,9 +381,9 @@
       "description": "Nawet DS Context Menu component.",
       "files": [
         {
-          "path": "packages/ui/src/components/context-menu.tsx",
+          "path": "packages/ui/src/components/nawet/context-menu.tsx",
           "type": "registry:ui",
-          "target": "@ui/context-menu.tsx"
+          "target": "@components/nawet/context-menu.tsx"
         }
       ],
       "name": "context-menu",
@@ -402,9 +402,9 @@
       "description": "Nawet DS Dialog component.",
       "files": [
         {
-          "path": "packages/ui/src/components/dialog.tsx",
+          "path": "packages/ui/src/components/nawet/dialog.tsx",
           "type": "registry:ui",
-          "target": "@ui/dialog.tsx"
+          "target": "@components/nawet/dialog.tsx"
         }
       ],
       "name": "dialog",
@@ -424,9 +424,9 @@
       "description": "Nawet DS Direction component.",
       "files": [
         {
-          "path": "packages/ui/src/components/direction.tsx",
+          "path": "packages/ui/src/components/nawet/direction.tsx",
           "type": "registry:ui",
-          "target": "@ui/direction.tsx"
+          "target": "@components/nawet/direction.tsx"
         }
       ],
       "name": "direction",
@@ -440,9 +440,9 @@
       "description": "Nawet DS Drawer component.",
       "files": [
         {
-          "path": "packages/ui/src/components/drawer.tsx",
+          "path": "packages/ui/src/components/nawet/drawer.tsx",
           "type": "registry:ui",
-          "target": "@ui/drawer.tsx"
+          "target": "@components/nawet/drawer.tsx"
         }
       ],
       "name": "drawer",
@@ -456,9 +456,9 @@
       "description": "Nawet DS Dropdown Menu component.",
       "files": [
         {
-          "path": "packages/ui/src/components/dropdown-menu.tsx",
+          "path": "packages/ui/src/components/nawet/dropdown-menu.tsx",
           "type": "registry:ui",
-          "target": "@ui/dropdown-menu.tsx"
+          "target": "@components/nawet/dropdown-menu.tsx"
         }
       ],
       "name": "dropdown-menu",
@@ -477,9 +477,9 @@
       "description": "Nawet DS Empty component.",
       "files": [
         {
-          "path": "packages/ui/src/components/empty.tsx",
+          "path": "packages/ui/src/components/nawet/empty.tsx",
           "type": "registry:ui",
-          "target": "@ui/empty.tsx"
+          "target": "@components/nawet/empty.tsx"
         }
       ],
       "name": "empty",
@@ -493,9 +493,9 @@
       "description": "Nawet DS Field component.",
       "files": [
         {
-          "path": "packages/ui/src/components/field.tsx",
+          "path": "packages/ui/src/components/nawet/field.tsx",
           "type": "registry:ui",
-          "target": "@ui/field.tsx"
+          "target": "@components/nawet/field.tsx"
         }
       ],
       "name": "field",
@@ -514,9 +514,9 @@
       "description": "Nawet DS Hover Card component.",
       "files": [
         {
-          "path": "packages/ui/src/components/hover-card.tsx",
+          "path": "packages/ui/src/components/nawet/hover-card.tsx",
           "type": "registry:ui",
-          "target": "@ui/hover-card.tsx"
+          "target": "@components/nawet/hover-card.tsx"
         }
       ],
       "name": "hover-card",
@@ -534,9 +534,9 @@
       "description": "Nawet DS Input Group component.",
       "files": [
         {
-          "path": "packages/ui/src/components/input-group.tsx",
+          "path": "packages/ui/src/components/nawet/input-group.tsx",
           "type": "registry:ui",
-          "target": "@ui/input-group.tsx"
+          "target": "@components/nawet/input-group.tsx"
         }
       ],
       "name": "input-group",
@@ -556,9 +556,9 @@
       "description": "Nawet DS Input OTP component.",
       "files": [
         {
-          "path": "packages/ui/src/components/input-otp.tsx",
+          "path": "packages/ui/src/components/nawet/input-otp.tsx",
           "type": "registry:ui",
-          "target": "@ui/input-otp.tsx"
+          "target": "@components/nawet/input-otp.tsx"
         }
       ],
       "name": "input-otp",
@@ -576,9 +576,9 @@
       "description": "Nawet DS Input component.",
       "files": [
         {
-          "path": "packages/ui/src/components/input.tsx",
+          "path": "packages/ui/src/components/nawet/input.tsx",
           "type": "registry:ui",
-          "target": "@ui/input.tsx"
+          "target": "@components/nawet/input.tsx"
         }
       ],
       "name": "input",
@@ -592,9 +592,9 @@
       "description": "Nawet DS Item component.",
       "files": [
         {
-          "path": "packages/ui/src/components/item.tsx",
+          "path": "packages/ui/src/components/nawet/item.tsx",
           "type": "registry:ui",
-          "target": "@ui/item.tsx"
+          "target": "@components/nawet/item.tsx"
         }
       ],
       "name": "item",
@@ -612,9 +612,9 @@
       "description": "Nawet DS Kbd component.",
       "files": [
         {
-          "path": "packages/ui/src/components/kbd.tsx",
+          "path": "packages/ui/src/components/nawet/kbd.tsx",
           "type": "registry:ui",
-          "target": "@ui/kbd.tsx"
+          "target": "@components/nawet/kbd.tsx"
         }
       ],
       "name": "kbd",
@@ -628,9 +628,9 @@
       "description": "Nawet DS Label component.",
       "files": [
         {
-          "path": "packages/ui/src/components/label.tsx",
+          "path": "packages/ui/src/components/nawet/label.tsx",
           "type": "registry:ui",
-          "target": "@ui/label.tsx"
+          "target": "@components/nawet/label.tsx"
         }
       ],
       "name": "label",
@@ -644,9 +644,9 @@
       "description": "Nawet DS Marker component.",
       "files": [
         {
-          "path": "packages/ui/src/components/marker.tsx",
+          "path": "packages/ui/src/components/nawet/marker.tsx",
           "type": "registry:ui",
-          "target": "@ui/marker.tsx"
+          "target": "@components/nawet/marker.tsx"
         }
       ],
       "name": "marker",
@@ -660,9 +660,9 @@
       "description": "Nawet DS Menubar component.",
       "files": [
         {
-          "path": "packages/ui/src/components/menubar.tsx",
+          "path": "packages/ui/src/components/nawet/menubar.tsx",
           "type": "registry:ui",
-          "target": "@ui/menubar.tsx"
+          "target": "@components/nawet/menubar.tsx"
         }
       ],
       "name": "menubar",
@@ -681,9 +681,9 @@
       "description": "Nawet DS Message Scroller component.",
       "files": [
         {
-          "path": "packages/ui/src/components/message-scroller.tsx",
+          "path": "packages/ui/src/components/nawet/message-scroller.tsx",
           "type": "registry:ui",
-          "target": "@ui/message-scroller.tsx"
+          "target": "@components/nawet/message-scroller.tsx"
         }
       ],
       "name": "message-scroller",
@@ -702,9 +702,9 @@
       "description": "Nawet DS Message component.",
       "files": [
         {
-          "path": "packages/ui/src/components/message.tsx",
+          "path": "packages/ui/src/components/nawet/message.tsx",
           "type": "registry:ui",
-          "target": "@ui/message.tsx"
+          "target": "@components/nawet/message.tsx"
         }
       ],
       "name": "message",
@@ -718,9 +718,9 @@
       "description": "Nawet DS Native Select component.",
       "files": [
         {
-          "path": "packages/ui/src/components/native-select.tsx",
+          "path": "packages/ui/src/components/nawet/native-select.tsx",
           "type": "registry:ui",
-          "target": "@ui/native-select.tsx"
+          "target": "@components/nawet/native-select.tsx"
         }
       ],
       "name": "native-select",
@@ -738,9 +738,9 @@
       "description": "Nawet DS Navigation Menu component.",
       "files": [
         {
-          "path": "packages/ui/src/components/navigation-menu.tsx",
+          "path": "packages/ui/src/components/nawet/navigation-menu.tsx",
           "type": "registry:ui",
-          "target": "@ui/navigation-menu.tsx"
+          "target": "@components/nawet/navigation-menu.tsx"
         }
       ],
       "name": "navigation-menu",
@@ -758,9 +758,9 @@
       "description": "Nawet DS Pagination component.",
       "files": [
         {
-          "path": "packages/ui/src/components/pagination.tsx",
+          "path": "packages/ui/src/components/nawet/pagination.tsx",
           "type": "registry:ui",
-          "target": "@ui/pagination.tsx"
+          "target": "@components/nawet/pagination.tsx"
         }
       ],
       "name": "pagination",
@@ -779,9 +779,9 @@
       "description": "Nawet DS Popover component.",
       "files": [
         {
-          "path": "packages/ui/src/components/popover.tsx",
+          "path": "packages/ui/src/components/nawet/popover.tsx",
           "type": "registry:ui",
-          "target": "@ui/popover.tsx"
+          "target": "@components/nawet/popover.tsx"
         }
       ],
       "name": "popover",
@@ -799,9 +799,9 @@
       "description": "Nawet DS Progress component.",
       "files": [
         {
-          "path": "packages/ui/src/components/progress.tsx",
+          "path": "packages/ui/src/components/nawet/progress.tsx",
           "type": "registry:ui",
-          "target": "@ui/progress.tsx"
+          "target": "@components/nawet/progress.tsx"
         }
       ],
       "name": "progress",
@@ -815,9 +815,9 @@
       "description": "Nawet DS Providers component.",
       "files": [
         {
-          "path": "packages/ui/src/components/providers.tsx",
+          "path": "packages/ui/src/components/nawet/providers.tsx",
           "type": "registry:ui",
-          "target": "@ui/providers.tsx"
+          "target": "@components/nawet/providers.tsx"
         }
       ],
       "name": "providers",
@@ -831,9 +831,9 @@
       "description": "Nawet DS Questionnaire component.",
       "files": [
         {
-          "path": "packages/ui/src/components/questionnaire.tsx",
+          "path": "packages/ui/src/components/nawet/questionnaire.tsx",
           "type": "registry:ui",
-          "target": "@ui/questionnaire.tsx"
+          "target": "@components/nawet/questionnaire.tsx"
         }
       ],
       "name": "questionnaire",
@@ -852,9 +852,9 @@
       "description": "Nawet DS Radio Group component.",
       "files": [
         {
-          "path": "packages/ui/src/components/radio-group.tsx",
+          "path": "packages/ui/src/components/nawet/radio-group.tsx",
           "type": "registry:ui",
-          "target": "@ui/radio-group.tsx"
+          "target": "@components/nawet/radio-group.tsx"
         }
       ],
       "name": "radio-group",
@@ -868,9 +868,9 @@
       "description": "Nawet DS Resizable component.",
       "files": [
         {
-          "path": "packages/ui/src/components/resizable.tsx",
+          "path": "packages/ui/src/components/nawet/resizable.tsx",
           "type": "registry:ui",
-          "target": "@ui/resizable.tsx"
+          "target": "@components/nawet/resizable.tsx"
         }
       ],
       "name": "resizable",
@@ -884,9 +884,9 @@
       "description": "Nawet DS Scroll Area component.",
       "files": [
         {
-          "path": "packages/ui/src/components/scroll-area.tsx",
+          "path": "packages/ui/src/components/nawet/scroll-area.tsx",
           "type": "registry:ui",
-          "target": "@ui/scroll-area.tsx"
+          "target": "@components/nawet/scroll-area.tsx"
         }
       ],
       "name": "scroll-area",
@@ -900,9 +900,9 @@
       "description": "Nawet DS Select component.",
       "files": [
         {
-          "path": "packages/ui/src/components/select.tsx",
+          "path": "packages/ui/src/components/nawet/select.tsx",
           "type": "registry:ui",
-          "target": "@ui/select.tsx"
+          "target": "@components/nawet/select.tsx"
         }
       ],
       "name": "select",
@@ -921,9 +921,9 @@
       "description": "Nawet DS Separator component.",
       "files": [
         {
-          "path": "packages/ui/src/components/separator.tsx",
+          "path": "packages/ui/src/components/nawet/separator.tsx",
           "type": "registry:ui",
-          "target": "@ui/separator.tsx"
+          "target": "@components/nawet/separator.tsx"
         }
       ],
       "name": "separator",
@@ -937,9 +937,9 @@
       "description": "Nawet DS Sheet component.",
       "files": [
         {
-          "path": "packages/ui/src/components/sheet.tsx",
+          "path": "packages/ui/src/components/nawet/sheet.tsx",
           "type": "registry:ui",
-          "target": "@ui/sheet.tsx"
+          "target": "@components/nawet/sheet.tsx"
         }
       ],
       "name": "sheet",
@@ -958,9 +958,9 @@
       "description": "Nawet DS Sidebar component.",
       "files": [
         {
-          "path": "packages/ui/src/components/sidebar.tsx",
+          "path": "packages/ui/src/components/nawet/sidebar.tsx",
           "type": "registry:ui",
-          "target": "@ui/sidebar.tsx"
+          "target": "@components/nawet/sidebar.tsx"
         }
       ],
       "name": "sidebar",
@@ -985,9 +985,9 @@
       "description": "Nawet DS Skeleton component.",
       "files": [
         {
-          "path": "packages/ui/src/components/skeleton.tsx",
+          "path": "packages/ui/src/components/nawet/skeleton.tsx",
           "type": "registry:ui",
-          "target": "@ui/skeleton.tsx"
+          "target": "@components/nawet/skeleton.tsx"
         }
       ],
       "name": "skeleton",
@@ -1001,9 +1001,9 @@
       "description": "Nawet DS Slider component.",
       "files": [
         {
-          "path": "packages/ui/src/components/slider.tsx",
+          "path": "packages/ui/src/components/nawet/slider.tsx",
           "type": "registry:ui",
-          "target": "@ui/slider.tsx"
+          "target": "@components/nawet/slider.tsx"
         }
       ],
       "name": "slider",
@@ -1017,9 +1017,9 @@
       "description": "Nawet DS Spinner component.",
       "files": [
         {
-          "path": "packages/ui/src/components/spinner.tsx",
+          "path": "packages/ui/src/components/nawet/spinner.tsx",
           "type": "registry:ui",
-          "target": "@ui/spinner.tsx"
+          "target": "@components/nawet/spinner.tsx"
         }
       ],
       "name": "spinner",
@@ -1037,9 +1037,9 @@
       "description": "Nawet DS Switch component.",
       "files": [
         {
-          "path": "packages/ui/src/components/switch.tsx",
+          "path": "packages/ui/src/components/nawet/switch.tsx",
           "type": "registry:ui",
-          "target": "@ui/switch.tsx"
+          "target": "@components/nawet/switch.tsx"
         }
       ],
       "name": "switch",
@@ -1053,9 +1053,9 @@
       "description": "Nawet DS Table component.",
       "files": [
         {
-          "path": "packages/ui/src/components/table.tsx",
+          "path": "packages/ui/src/components/nawet/table.tsx",
           "type": "registry:ui",
-          "target": "@ui/table.tsx"
+          "target": "@components/nawet/table.tsx"
         }
       ],
       "name": "table",
@@ -1069,9 +1069,9 @@
       "description": "Nawet DS Tabs component.",
       "files": [
         {
-          "path": "packages/ui/src/components/tabs.tsx",
+          "path": "packages/ui/src/components/nawet/tabs.tsx",
           "type": "registry:ui",
-          "target": "@ui/tabs.tsx"
+          "target": "@components/nawet/tabs.tsx"
         }
       ],
       "name": "tabs",
@@ -1085,9 +1085,9 @@
       "description": "Nawet DS Textarea component.",
       "files": [
         {
-          "path": "packages/ui/src/components/textarea.tsx",
+          "path": "packages/ui/src/components/nawet/textarea.tsx",
           "type": "registry:ui",
-          "target": "@ui/textarea.tsx"
+          "target": "@components/nawet/textarea.tsx"
         }
       ],
       "name": "textarea",
@@ -1101,9 +1101,9 @@
       "description": "Nawet DS Toast component.",
       "files": [
         {
-          "path": "packages/ui/src/components/toast.tsx",
+          "path": "packages/ui/src/components/nawet/toast.tsx",
           "type": "registry:ui",
-          "target": "@ui/toast.tsx"
+          "target": "@components/nawet/toast.tsx"
         }
       ],
       "name": "toast",
@@ -1122,9 +1122,9 @@
       "description": "Nawet DS Toggle Group component.",
       "files": [
         {
-          "path": "packages/ui/src/components/toggle-group.tsx",
+          "path": "packages/ui/src/components/nawet/toggle-group.tsx",
           "type": "registry:ui",
-          "target": "@ui/toggle-group.tsx"
+          "target": "@components/nawet/toggle-group.tsx"
         }
       ],
       "name": "toggle-group",
@@ -1142,9 +1142,9 @@
       "description": "Nawet DS Toggle component.",
       "files": [
         {
-          "path": "packages/ui/src/components/toggle.tsx",
+          "path": "packages/ui/src/components/nawet/toggle.tsx",
           "type": "registry:ui",
-          "target": "@ui/toggle.tsx"
+          "target": "@components/nawet/toggle.tsx"
         }
       ],
       "name": "toggle",
@@ -1158,9 +1158,9 @@
       "description": "Nawet DS Tooltip component.",
       "files": [
         {
-          "path": "packages/ui/src/components/tooltip.tsx",
+          "path": "packages/ui/src/components/nawet/tooltip.tsx",
           "type": "registry:ui",
-          "target": "@ui/tooltip.tsx"
+          "target": "@components/nawet/tooltip.tsx"
         }
       ],
       "name": "tooltip",
@@ -1178,9 +1178,9 @@
       "description": "Nawet DS Trace component.",
       "files": [
         {
-          "path": "packages/ui/src/components/trace.tsx",
+          "path": "packages/ui/src/components/nawet/trace.tsx",
           "type": "registry:ui",
-          "target": "@ui/trace.tsx"
+          "target": "@components/nawet/trace.tsx"
         }
       ],
       "name": "trace",
@@ -1199,9 +1199,9 @@
       "description": "Nawet DS common hook.",
       "files": [
         {
-          "path": "packages/ui/src/hooks/common.ts",
+          "path": "packages/ui/src/hooks/nawet/common.ts",
           "type": "registry:hook",
-          "target": "@hooks/common.ts"
+          "target": "@hooks/nawet/common.ts"
         }
       ],
       "name": "common",
@@ -1215,9 +1215,9 @@
       "description": "Nawet DS useControllable hook.",
       "files": [
         {
-          "path": "packages/ui/src/hooks/use-controllable.ts",
+          "path": "packages/ui/src/hooks/nawet/use-controllable.ts",
           "type": "registry:hook",
-          "target": "@hooks/use-controllable.ts"
+          "target": "@hooks/nawet/use-controllable.ts"
         }
       ],
       "name": "use-controllable",
@@ -1231,9 +1231,9 @@
       "description": "Nawet DS useHighlightedCode hook.",
       "files": [
         {
-          "path": "packages/ui/src/hooks/use-highlighted-code.ts",
+          "path": "packages/ui/src/hooks/nawet/use-highlighted-code.ts",
           "type": "registry:hook",
-          "target": "@hooks/use-highlighted-code.ts"
+          "target": "@hooks/nawet/use-highlighted-code.ts"
         }
       ],
       "name": "use-highlighted-code",
@@ -1247,9 +1247,9 @@
       "description": "Nawet DS useMobile hook.",
       "files": [
         {
-          "path": "packages/ui/src/hooks/use-mobile.ts",
+          "path": "packages/ui/src/hooks/nawet/use-mobile.ts",
           "type": "registry:hook",
-          "target": "@hooks/use-mobile.ts"
+          "target": "@hooks/nawet/use-mobile.ts"
         }
       ],
       "name": "use-mobile",
@@ -1263,9 +1263,9 @@
       "description": "Nawet DS Highlighter utility.",
       "files": [
         {
-          "path": "packages/ui/src/lib/highlighter.tsx",
+          "path": "packages/ui/src/lib/nawet/highlighter.tsx",
           "type": "registry:lib",
-          "target": "@lib/highlighter.tsx"
+          "target": "@lib/nawet/highlighter.tsx"
         }
       ],
       "name": "highlighter",
@@ -1279,9 +1279,9 @@
       "description": "Nawet DS Motion utility.",
       "files": [
         {
-          "path": "packages/ui/src/lib/motion.ts",
+          "path": "packages/ui/src/lib/nawet/motion.ts",
           "type": "registry:lib",
-          "target": "@lib/motion.ts"
+          "target": "@lib/nawet/motion.ts"
         }
       ],
       "name": "motion",
@@ -1295,9 +1295,9 @@
       "description": "Nawet DS Tokens utility.",
       "files": [
         {
-          "path": "packages/ui/src/lib/tokens.ts",
+          "path": "packages/ui/src/lib/nawet/tokens.ts",
           "type": "registry:lib",
-          "target": "@lib/tokens.ts"
+          "target": "@lib/nawet/tokens.ts"
         }
       ],
       "name": "tokens",
@@ -1311,9 +1311,9 @@
       "description": "Nawet DS Utils utility.",
       "files": [
         {
-          "path": "packages/ui/src/lib/utils.ts",
+          "path": "packages/ui/src/lib/nawet/utils.ts",
           "type": "registry:lib",
-          "target": "@lib/utils.ts"
+          "target": "@lib/nawet/utils.ts"
         }
       ],
       "name": "utils",
@@ -1327,9 +1327,9 @@
       "description": "Nawet DS icon registry backed by Tabler.",
       "files": [
         {
-          "path": "packages/ui/src/icons.tsx",
+          "path": "packages/ui/src/lib/nawet/icons.tsx",
           "type": "registry:lib",
-          "target": "@lib/icons.tsx"
+          "target": "@lib/nawet/icons.tsx"
         }
       ],
       "name": "icons",

@@ -12,10 +12,10 @@
   "iconLibrary": "tabler",
   "aliases": {
     "components": "@/components",
-    "utils": "@/lib/utils",
+    "utils": "@/lib/nawet/utils",
     "hooks": "@/hooks",
     "lib": "@/lib",
-    "ui": "@/components"
+    "ui": "@/components/nawet"
   },
   "rtl": true,
   "menuColor": "default",
