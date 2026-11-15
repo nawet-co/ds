@@ -1,11 +1,11 @@
 import * as React from "react"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 
-import { Button } from "@nawet/ui/components/button"
-import { Icons } from "@nawet/ui/icons"
+import { Button } from "@/components/ui/button"
+import { Icons } from "@/lib/icons"
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>

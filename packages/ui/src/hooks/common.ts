@@ -1,6 +1,6 @@
 /**
  * Common React utility hooks re-exported from usehooks-ts.
- * Import via: import { useDebounceValue } from "@nawet/ui/hooks/common"
+ * Import via: import { useDebounceValue } from "@/hooks/common"
  *
  * Full list: https://usehooks-ts.com
  */

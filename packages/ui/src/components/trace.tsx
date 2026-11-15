@@ -1,12 +1,12 @@
 import * as React from "react"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@nawet/ui/components/collapsible"
-import { Icons } from "@nawet/ui/icons"
+} from "@/components/ui/collapsible"
+import { Icons } from "@/lib/icons"
 
 function Trace({ className, ...props }: React.ComponentProps<"div">) {
   return (

@@ -3,6 +3,15 @@
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/components/ui/*": ["../../packages/ui/src/components/*"],
+      "@/components/*": ["../../packages/ui/src/components/*"],
+      "@/hooks/*": ["../../packages/ui/src/hooks/*"],
+      "@/lib/icons": ["../../packages/ui/src/icons.tsx"],
+      "@/lib/*": ["../../packages/ui/src/lib/*"]
+    },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }

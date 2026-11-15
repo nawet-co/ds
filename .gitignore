@@ -10,6 +10,7 @@ build
 
 # Generated files
 apps/showcase/src/routeTree.gen.ts
+apps/showcase/public/r/
 local.db
 local.db-*
 

@@ -1,5 +1,5 @@
-import { cn } from "cn"
-import { Icons } from "@nawet/ui/icons"
+import { cn } from "@/lib/utils"
+import { Icons } from "@/lib/icons"
 
 function Spinner({ className, ...props }: React.ComponentProps<"svg">) {
   return (

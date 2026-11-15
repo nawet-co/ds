@@ -1,26 +1,36 @@
 # Nawet DS
 
-The official design system of Nawet Co, embodying its signature aesthetic, refined styling, and deliberate taste.
+The official design system of Nawet Co. A [shadcn](https://ui.shadcn.com/) registry of composable, accessible components built on Base UI and Tailwind CSS v4.
 
-## Overview
+## Install
 
-Nawet DS is a custom [shadcn](https://ui.shadcn.com/) registry of composable, accessible components published under `@nawet-ds`. Built around shadcn's design token architecture, the components integrate seamlessly with existing primitives while expressing the distinct visual identity, rhythm, and craft of Nawet Co.
+```bash
+pnpm dlx shadcn@latest add @nawet/button
+```
 
-Rather than generic defaults, Nawet DS delivers an opinionated collection of building blocks that cut boilerplate without compromising flexibility, responsive behavior, or design fidelity.
+Install the whole system:
 
-## Repository scope
+```bash
+pnpm dlx shadcn@latest add @nawet/base
+```
 
-This repository is public. It contains the design system source (`packages/ui`), the registry build, and the public showcase app (`apps/showcase`).
+Or install from GitHub:
 
-The Nawet marketing site is maintained in a separate private repository and consumes the published registry. It is intentionally not part of this workspace.
+```bash
+pnpm dlx shadcn@latest add nawet-co/ds/button
+```
 
 ## Requirements
 
-- React 19+
-- [React Compiler](https://react.dev/learn/react-compiler) enabled in the consuming app.
+React 19+, Tailwind CSS v4, React Compiler, and `@import "shadcn/tailwind.css";` in your global CSS.
 
-Registry code should not add manual `useMemo` / `useCallback` — memoization is the compiler's responsibility, not the component's.
+## Development
 
-## Documentation
+```bash
+pnpm registry:build
+pnpm registry:validate
+```
 
-Explore the components and registry at [nawet-ds.abbes.dev](https://nawet-ds.abbes.dev).
+Components and usage: [nawet-ds.abbes.dev](https://nawet-ds.abbes.dev)
+
+MIT licensed.

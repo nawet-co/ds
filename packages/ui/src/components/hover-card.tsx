@@ -1,9 +1,9 @@
 "use client"
 
 import { PreviewCard as PreviewCardPrimitive } from "@base-ui/react/preview-card"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
-import { transitions } from "@nawet/ui/lib/motion"
+import { transitions } from "@/lib/motion"
 
 function HoverCard({ ...props }: PreviewCardPrimitive.Root.Props) {
   return <PreviewCardPrimitive.Root data-slot="hover-card" {...props} />

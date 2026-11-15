@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import { Toast as ToastPrimitive } from "@base-ui/react/toast"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
-import { Button } from "@nawet/ui/components/button"
-import { Icons } from "@nawet/ui/icons"
+import { Button } from "@/components/ui/button"
+import { Icons } from "@/lib/icons"
 
 const toast = ToastPrimitive.createToastManager()
 

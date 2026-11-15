@@ -1,7 +1,7 @@
 import type { ChartValue } from "@tanstack/charts";
 import type { ChartProps as TanStackChartProps } from "@tanstack/charts/react/tooltip";
 import { Chart as TanStackChart } from "@tanstack/charts/react/tooltip";
-import { cn } from "cn";
+import { cn } from "@/lib/utils";
 
 /**
  * Design-token palette shared by every chart.

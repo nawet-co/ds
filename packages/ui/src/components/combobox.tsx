@@ -2,18 +2,18 @@
 
 import * as React from "react"
 import { Combobox as ComboboxPrimitive } from "@base-ui/react"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
-import { transitions } from "@nawet/ui/lib/motion"
+import { transitions } from "@/lib/motion"
 
-import { Button } from "@nawet/ui/components/button"
+import { Button } from "@/components/ui/button"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@nawet/ui/components/input-group"
-import { Icons } from "@nawet/ui/icons"
+} from "@/components/ui/input-group"
+import { Icons } from "@/lib/icons"
 
 const Combobox = ComboboxPrimitive.Root
 

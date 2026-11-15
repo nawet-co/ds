@@ -4,9 +4,23 @@ import { RevenueChart } from "../components/revenue-chart";
 import { PopoverDemo } from "../components/popover-demo";
 ---
 
-<Layout title="nawet">
-  <div class="container mx-auto max-w-3xl px-4 py-2">
-    <pre class="overflow-x-auto font-mono text-sm text-white pt-8">NAWET DS</pre>
+<Layout title="Nawet DS">
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <header class="space-y-3">
+      <h1 class="font-heading text-3xl font-semibold tracking-tight">
+        Nawet DS
+      </h1>
+      <p class="text-sm text-neutral-400">
+        An opinionated design system for shadcn, built on Base UI and Tailwind
+        CSS v4.
+      </p>
+      <pre
+        class="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900 p-4 font-mono text-sm text-white"><code>pnpm dlx shadcn@latest add @nawet/button</code></pre>
+      <p class="text-sm text-neutral-400">
+        Install the full system with
+        <code class="font-mono text-white">@nawet/base</code>.
+      </p>
+    </header>
     <div class="grid gap-6 pt-8">
       <RevenueChart client:load />
       <PopoverDemo client:load />

@@ -3,7 +3,7 @@
  * Import this instead of hardcoding transition values in individual components.
  *
  * @example
- * import { transitions } from "@nawet/ui/lib/motion"
+ * import { transitions } from "@/lib/motion"
  *
  * <motion.div transition={transitions.spring} ... />
  */

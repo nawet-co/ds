@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import { Select as SelectPrimitive } from "@base-ui/react/select"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
-import { transitions } from "@nawet/ui/lib/motion"
-import { Icons } from "@nawet/ui/icons"
+import { transitions } from "@/lib/motion"
+import { Icons } from "@/lib/icons"
 
 const Select = SelectPrimitive.Root
 

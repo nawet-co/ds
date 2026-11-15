@@ -1,7 +1,7 @@
 import { NavigationMenu as NavigationMenuPrimitive } from "@base-ui/react/navigation-menu"
 import { cva } from "class-variance-authority"
-import { cn } from "cn"
-import { Icons } from "@nawet/ui/icons"
+import { cn } from "@/lib/utils"
+import { Icons } from "@/lib/icons"
 
 function NavigationMenu({
   align = "start",

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Command as CommandPrimitive } from "cmdk"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
 import {
   Dialog,
@@ -8,12 +8,12 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@nawet/ui/components/dialog"
+} from "@/components/ui/dialog"
 import {
   InputGroup,
   InputGroupAddon,
-} from "@nawet/ui/components/input-group"
-import { Icons } from "@nawet/ui/icons"
+} from "@/components/ui/input-group"
+import { Icons } from "@/lib/icons"
 
 function Command({
   className,

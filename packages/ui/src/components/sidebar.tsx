@@ -2,26 +2,26 @@ import * as React from "react"
 import { mergeProps } from "@base-ui/react/merge-props"
 import { useRender } from "@base-ui/react/use-render"
 import { cva, type VariantProps } from "class-variance-authority"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
-import { useIsMobile } from "@nawet/ui/hooks/use-mobile"
-import { Button } from "@nawet/ui/components/button"
-import { Input } from "@nawet/ui/components/input"
-import { Separator } from "@nawet/ui/components/separator"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Separator } from "@/components/ui/separator"
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from "@nawet/ui/components/sheet"
-import { Skeleton } from "@nawet/ui/components/skeleton"
+} from "@/components/ui/sheet"
+import { Skeleton } from "@/components/ui/skeleton"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@nawet/ui/components/tooltip"
-import { Icons } from "@nawet/ui/icons"
+} from "@/components/ui/tooltip"
+import { Icons } from "@/lib/icons"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7

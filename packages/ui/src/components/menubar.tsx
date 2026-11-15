@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Menu as MenuPrimitive } from "@base-ui/react/menu"
 import { Menubar as MenubarPrimitive } from "@base-ui/react/menubar"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
 import {
   DropdownMenu,
@@ -19,8 +19,8 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@nawet/ui/components/dropdown-menu"
-import { Icons } from "@nawet/ui/icons"
+} from "@/components/ui/dropdown-menu"
+import { Icons } from "@/lib/icons"
 
 function Menubar({ className, ...props }: MenubarPrimitive.Props) {
   return (

@@ -9,20 +9,24 @@ export default Alchemy.Stack(
     providers: Cloudflare.providers(),
     state: Cloudflare.state(),
   },
-  Effect.gen(function* () {
+  Effect.gen(function* nawet() {
     const showcaseWorker = yield* Cloudflare.Website.Astro("showcase", {
-      rootDir: "../../apps/showcase",
-      env: {
-        SESSION: Cloudflare.KV.Namespace("session"),
-        IMAGES: Cloudflare.Images.Images(),
+      astro: {
+        site: "https://nawet-ds.abbes.dev",
       },
       dev: {
         port: 4321,
       },
+      domain: "nawet-ds.abbes.dev",
+      env: {
+        IMAGES: Cloudflare.Images.Images(),
+        SESSION: Cloudflare.KV.Namespace("session"),
+      },
+      rootDir: "../../apps/showcase",
     });
 
     return {
       showcase: showcaseWorker.url,
     };
-  }),
+  })
 );

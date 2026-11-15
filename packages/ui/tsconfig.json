@@ -9,7 +9,12 @@
     "strict": true,
     "noEmit": true,
     "paths": {
-      "@nawet/ui/*": ["./src/*"]
+      "@nawet/ui/*": ["./src/*"],
+      "@/components/ui/*": ["./src/components/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/lib/icons": ["./src/icons.tsx"],
+      "@/lib/*": ["./src/lib/*"]
     }
   },
   "include": ["."],

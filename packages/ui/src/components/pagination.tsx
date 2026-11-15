@@ -1,8 +1,8 @@
 import * as React from "react"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
-import { Button } from "@nawet/ui/components/button"
-import { Icons } from "@nawet/ui/icons"
+import { Button } from "@/components/ui/button"
+import { Icons } from "@/lib/icons"
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
   return (

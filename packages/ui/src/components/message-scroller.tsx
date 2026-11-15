@@ -5,10 +5,10 @@ import {
   useMessageScrollerScrollable,
   useMessageScrollerVisibility,
 } from "@shadcn/react/message-scroller"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
-import { Button } from "@nawet/ui/components/button"
-import { Icons } from "@nawet/ui/icons"
+import { Button } from "@/components/ui/button"
+import { Icons } from "@/lib/icons"
 
 function MessageScrollerProvider(
   props: React.ComponentProps<typeof MessageScrollerPrimitive.Provider>

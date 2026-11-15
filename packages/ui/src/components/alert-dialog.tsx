@@ -1,10 +1,10 @@
 import * as React from "react"
 import { AlertDialog as AlertDialogPrimitive } from "@base-ui/react/alert-dialog"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
 
-import { transitions } from "@nawet/ui/lib/motion"
-import { Button } from "@nawet/ui/components/button"
+import { transitions } from "@/lib/motion"
+import { Button } from "@/components/ui/button"
 
 function AlertDialog({ ...props }: AlertDialogPrimitive.Root.Props) {
   return <AlertDialogPrimitive.Root data-slot="alert-dialog" {...props} />

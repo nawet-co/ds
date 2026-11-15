@@ -17,6 +17,9 @@
     "utils": "@nawet/ui/lib/utils",
     "ui": "@nawet/ui/components"
   },
+  "registries": {
+    "@nawet": "https://nawet-ds.abbes.dev/r/{name}.json"
+  },
   "rtl": true,
   "menuColor": "default",
   "menuAccent": "subtle"

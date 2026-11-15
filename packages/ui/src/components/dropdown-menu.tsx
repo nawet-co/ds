@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Menu as MenuPrimitive } from "@base-ui/react/menu"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
-import { Icons } from "@nawet/ui/icons"
-import { transitions } from "@nawet/ui/lib/motion"
+import { Icons } from "@/lib/icons"
+import { transitions } from "@/lib/motion"
 
 function DropdownMenu({ ...props }: MenuPrimitive.Root.Props) {
   return <MenuPrimitive.Root data-slot="dropdown-menu" {...props} />

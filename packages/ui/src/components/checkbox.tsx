@@ -1,8 +1,8 @@
 "use client"
 
 import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox"
-import { cn } from "cn"
-import { Icons } from "@nawet/ui/icons"
+import { cn } from "@/lib/utils"
+import { Icons } from "@/lib/icons"
 
 function Checkbox({ className, ...props }: CheckboxPrimitive.Root.Props) {
   return (

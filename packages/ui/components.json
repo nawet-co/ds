@@ -11,11 +11,11 @@
   },
   "iconLibrary": "tabler",
   "aliases": {
-    "components": "@nawet/ui/components",
-    "utils": "@nawet/ui/lib/utils",
-    "hooks": "@nawet/ui/hooks",
-    "lib": "@nawet/ui/lib",
-    "ui": "@nawet/ui/components"
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "hooks": "@/hooks",
+    "lib": "@/lib",
+    "ui": "@/components"
   },
   "rtl": true,
   "menuColor": "default",

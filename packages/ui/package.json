@@ -1,17 +1,28 @@
 {
   "name": "@nawet/ui",
   "version": "0.0.0",
-  "type": "module",
   "private": true,
+  "license": "MIT",
+  "type": "module",
   "sideEffects": [
     "./src/styles/globals.css"
   ],
-  "scripts": {
-    "typecheck": "tsc --noEmit"
+  "exports": {
+    ".": {
+      "types": "./src/index.ts"
+    },
+    "./globals.css": "./src/styles/globals.css",
+    "./icons": "./src/icons.tsx",
+    "./lib/highlighter": "./src/lib/highlighter.tsx",
+    "./lib/*": "./src/lib/*.ts",
+    "./components/*": "./src/components/*.tsx",
+    "./hooks/*": "./src/hooks/*.ts",
+    "./package.json": "./package.json"
   },
-  "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+  "scripts": {
+    "registry:build": "shadcn build registry.json -c ../.. -o apps/showcase/public/r",
+    "registry:validate": "shadcn registry validate -c ../..",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -46,14 +57,10 @@
     "tailwindcss": "^4",
     "typescript": "~6.0.2"
   },
-  "exports": {
-    ".": {
-      "types": "./src/index.ts"
-    },
-    "./globals.css": "./src/styles/globals.css",
-    "./icons": "./src/icons.tsx",
-    "./lib/*": "./src/lib/*.ts",
-    "./components/*": "./src/components/*.tsx",
-    "./hooks/*": "./src/hooks/*.ts"
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "shadcn": "^4.23.0",
+    "tailwindcss": "^4.0.0"
   }
 }

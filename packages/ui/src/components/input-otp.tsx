@@ -1,7 +1,7 @@
 import * as React from "react"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import { OTPInput, OTPInputContext } from "input-otp"
-import { Icons } from "@nawet/ui/icons"
+import { Icons } from "@/lib/icons"
 
 function InputOTP({
   className,

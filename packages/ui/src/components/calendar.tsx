@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import {
   DayPicker,
   getDefaultClassNames,
@@ -9,8 +9,8 @@ import {
   type Locale,
 } from "react-day-picker"
 
-import { Button, buttonVariants } from "@nawet/ui/components/button"
-import { Icons } from "@nawet/ui/icons"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { Icons } from "@/lib/icons"
 
 function Calendar({
   className,

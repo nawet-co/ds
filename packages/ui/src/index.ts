@@ -5,11 +5,11 @@
  * It exists for IDE discoverability and package-level type imports.
  *
  * Import components, hooks, and utilities via their subpaths:
- *   import { Button } from "@nawet/ui/components/button"
- *   import { useIsMobile } from "@nawet/ui/hooks/use-mobile"
- *   import { transitions } from "@nawet/ui/lib/motion"
- *   import { tokens } from "@nawet/ui/lib/tokens"
- *   import { cn } from "@nawet/ui/lib/utils"
+ *   import { Button } from "@/components/ui/button"
+ *   import { useIsMobile } from "@/hooks/use-mobile"
+ *   import { transitions } from "@/lib/motion"
+ *   import { tokens } from "@/lib/tokens"
+ *   import { cn } from "@/lib/utils"
  */
 
 // Re-export types from lib

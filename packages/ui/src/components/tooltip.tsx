@@ -1,9 +1,9 @@
 "use client"
 
 import { Tooltip as TooltipPrimitive } from "@base-ui/react/tooltip"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 import { motion } from "motion/react"
-import { transitions } from "@nawet/ui/lib/motion"
+import { transitions } from "@/lib/motion"
 
 function TooltipProvider({
   delay = 0,

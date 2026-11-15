@@ -5,7 +5,7 @@
  * These mirror the CSS custom properties in globals.css and should be kept in sync.
  *
  * @example
- * import { tokens } from "@nawet/ui/lib/tokens"
+ * import { tokens } from "@/lib/tokens"
  * animate({ backgroundColor: tokens.colors.primary })
  */
 

@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import { Questionnaire as QuestionnairePrimitive } from "@shadcn/react/questionnaire"
-import { cn } from "cn"
+import { cn } from "@/lib/utils"
 
-import { buttonVariants, type Button } from "@nawet/ui/components/button"
-import { Icons } from "@nawet/ui/icons"
+import { buttonVariants, type Button } from "@/components/ui/button"
+import { Icons } from "@/lib/icons"
 
 function Questionnaire({
   className,
