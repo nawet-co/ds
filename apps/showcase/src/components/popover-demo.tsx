@@ -5,13 +5,13 @@ import {
   PopoverTitle,
   PopoverDescription,
   PopoverTrigger,
-} from "@nawet/ui/components/popover";
+} from "@nawet/ui/components/nawet/popover";
 
 export function PopoverDemo() {
   return (
     <div className="flex items-center gap-4">
       <Popover>
-        <PopoverTrigger className="rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white hover:bg-white/15 transition-colors cursor-pointer">
+        <PopoverTrigger className="cursor-pointer rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/15">
           Open popover
         </PopoverTrigger>
         <PopoverContent>

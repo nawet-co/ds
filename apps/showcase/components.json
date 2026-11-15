@@ -12,9 +12,9 @@
   "iconLibrary": "tabler",
   "aliases": {
     "components": "@/components",
-    "hooks": "@/hooks",
-    "lib": "@/lib",
-    "utils": "@nawet/ui/lib/utils",
+    "hooks": "@nawet/ui/hooks",
+    "lib": "@nawet/ui/lib",
+    "utils": "@nawet/ui/lib/nawet/utils",
     "ui": "@nawet/ui/components"
   },
   "registries": {

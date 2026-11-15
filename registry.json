@@ -10,7 +10,7 @@
         {
           "path": "packages/ui/src/components/nawet/accordion.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/accordion.tsx"
+          "target": "@ui/nawet/accordion.tsx"
         }
       ],
       "name": "accordion",
@@ -30,7 +30,7 @@
         {
           "path": "packages/ui/src/components/nawet/alert-dialog.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/alert-dialog.tsx"
+          "target": "@ui/nawet/alert-dialog.tsx"
         }
       ],
       "name": "alert-dialog",
@@ -51,7 +51,7 @@
         {
           "path": "packages/ui/src/components/nawet/alert.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/alert.tsx"
+          "target": "@ui/nawet/alert.tsx"
         }
       ],
       "name": "alert",
@@ -67,7 +67,7 @@
         {
           "path": "packages/ui/src/components/nawet/aspect-ratio.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/aspect-ratio.tsx"
+          "target": "@ui/nawet/aspect-ratio.tsx"
         }
       ],
       "name": "aspect-ratio",
@@ -83,7 +83,7 @@
         {
           "path": "packages/ui/src/components/nawet/attachment.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/attachment.tsx"
+          "target": "@ui/nawet/attachment.tsx"
         }
       ],
       "name": "attachment",
@@ -103,7 +103,7 @@
         {
           "path": "packages/ui/src/components/nawet/avatar.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/avatar.tsx"
+          "target": "@ui/nawet/avatar.tsx"
         }
       ],
       "name": "avatar",
@@ -119,7 +119,7 @@
         {
           "path": "packages/ui/src/components/nawet/badge.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/badge.tsx"
+          "target": "@ui/nawet/badge.tsx"
         }
       ],
       "name": "badge",
@@ -135,7 +135,7 @@
         {
           "path": "packages/ui/src/components/nawet/breadcrumb.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/breadcrumb.tsx"
+          "target": "@ui/nawet/breadcrumb.tsx"
         }
       ],
       "name": "breadcrumb",
@@ -155,7 +155,7 @@
         {
           "path": "packages/ui/src/components/nawet/bubble.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/bubble.tsx"
+          "target": "@ui/nawet/bubble.tsx"
         }
       ],
       "name": "bubble",
@@ -171,7 +171,7 @@
         {
           "path": "packages/ui/src/components/nawet/button-group.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/button-group.tsx"
+          "target": "@ui/nawet/button-group.tsx"
         }
       ],
       "name": "button-group",
@@ -191,7 +191,7 @@
         {
           "path": "packages/ui/src/components/nawet/button.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/button.tsx"
+          "target": "@ui/nawet/button.tsx"
         }
       ],
       "name": "button",
@@ -207,7 +207,7 @@
         {
           "path": "packages/ui/src/components/nawet/calendar.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/calendar.tsx"
+          "target": "@ui/nawet/calendar.tsx"
         }
       ],
       "name": "calendar",
@@ -228,7 +228,7 @@
         {
           "path": "packages/ui/src/components/nawet/card.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/card.tsx"
+          "target": "@ui/nawet/card.tsx"
         }
       ],
       "name": "card",
@@ -244,7 +244,7 @@
         {
           "path": "packages/ui/src/components/nawet/carousel.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/carousel.tsx"
+          "target": "@ui/nawet/carousel.tsx"
         }
       ],
       "name": "carousel",
@@ -265,7 +265,7 @@
         {
           "path": "packages/ui/src/components/nawet/chart.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/chart.tsx"
+          "target": "@ui/nawet/chart.tsx"
         }
       ],
       "name": "chart",
@@ -281,7 +281,7 @@
         {
           "path": "packages/ui/src/components/nawet/checkbox.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/checkbox.tsx"
+          "target": "@ui/nawet/checkbox.tsx"
         }
       ],
       "name": "checkbox",
@@ -301,7 +301,7 @@
         {
           "path": "packages/ui/src/components/nawet/code-block.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/code-block.tsx"
+          "target": "@ui/nawet/code-block.tsx"
         }
       ],
       "name": "code-block",
@@ -322,7 +322,7 @@
         {
           "path": "packages/ui/src/components/nawet/collapsible.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/collapsible.tsx"
+          "target": "@ui/nawet/collapsible.tsx"
         }
       ],
       "name": "collapsible",
@@ -338,7 +338,7 @@
         {
           "path": "packages/ui/src/components/nawet/combobox.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/combobox.tsx"
+          "target": "@ui/nawet/combobox.tsx"
         }
       ],
       "name": "combobox",
@@ -361,7 +361,7 @@
         {
           "path": "packages/ui/src/components/nawet/command.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/command.tsx"
+          "target": "@ui/nawet/command.tsx"
         }
       ],
       "name": "command",
@@ -383,7 +383,7 @@
         {
           "path": "packages/ui/src/components/nawet/context-menu.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/context-menu.tsx"
+          "target": "@ui/nawet/context-menu.tsx"
         }
       ],
       "name": "context-menu",
@@ -404,7 +404,7 @@
         {
           "path": "packages/ui/src/components/nawet/dialog.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/dialog.tsx"
+          "target": "@ui/nawet/dialog.tsx"
         }
       ],
       "name": "dialog",
@@ -426,7 +426,7 @@
         {
           "path": "packages/ui/src/components/nawet/direction.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/direction.tsx"
+          "target": "@ui/nawet/direction.tsx"
         }
       ],
       "name": "direction",
@@ -442,7 +442,7 @@
         {
           "path": "packages/ui/src/components/nawet/drawer.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/drawer.tsx"
+          "target": "@ui/nawet/drawer.tsx"
         }
       ],
       "name": "drawer",
@@ -458,7 +458,7 @@
         {
           "path": "packages/ui/src/components/nawet/dropdown-menu.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/dropdown-menu.tsx"
+          "target": "@ui/nawet/dropdown-menu.tsx"
         }
       ],
       "name": "dropdown-menu",
@@ -479,7 +479,7 @@
         {
           "path": "packages/ui/src/components/nawet/empty.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/empty.tsx"
+          "target": "@ui/nawet/empty.tsx"
         }
       ],
       "name": "empty",
@@ -495,7 +495,7 @@
         {
           "path": "packages/ui/src/components/nawet/field.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/field.tsx"
+          "target": "@ui/nawet/field.tsx"
         }
       ],
       "name": "field",
@@ -516,7 +516,7 @@
         {
           "path": "packages/ui/src/components/nawet/hover-card.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/hover-card.tsx"
+          "target": "@ui/nawet/hover-card.tsx"
         }
       ],
       "name": "hover-card",
@@ -536,7 +536,7 @@
         {
           "path": "packages/ui/src/components/nawet/input-group.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/input-group.tsx"
+          "target": "@ui/nawet/input-group.tsx"
         }
       ],
       "name": "input-group",
@@ -558,7 +558,7 @@
         {
           "path": "packages/ui/src/components/nawet/input-otp.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/input-otp.tsx"
+          "target": "@ui/nawet/input-otp.tsx"
         }
       ],
       "name": "input-otp",
@@ -578,7 +578,7 @@
         {
           "path": "packages/ui/src/components/nawet/input.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/input.tsx"
+          "target": "@ui/nawet/input.tsx"
         }
       ],
       "name": "input",
@@ -594,7 +594,7 @@
         {
           "path": "packages/ui/src/components/nawet/item.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/item.tsx"
+          "target": "@ui/nawet/item.tsx"
         }
       ],
       "name": "item",
@@ -614,7 +614,7 @@
         {
           "path": "packages/ui/src/components/nawet/kbd.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/kbd.tsx"
+          "target": "@ui/nawet/kbd.tsx"
         }
       ],
       "name": "kbd",
@@ -630,7 +630,7 @@
         {
           "path": "packages/ui/src/components/nawet/label.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/label.tsx"
+          "target": "@ui/nawet/label.tsx"
         }
       ],
       "name": "label",
@@ -646,7 +646,7 @@
         {
           "path": "packages/ui/src/components/nawet/marker.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/marker.tsx"
+          "target": "@ui/nawet/marker.tsx"
         }
       ],
       "name": "marker",
@@ -662,7 +662,7 @@
         {
           "path": "packages/ui/src/components/nawet/menubar.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/menubar.tsx"
+          "target": "@ui/nawet/menubar.tsx"
         }
       ],
       "name": "menubar",
@@ -683,7 +683,7 @@
         {
           "path": "packages/ui/src/components/nawet/message-scroller.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/message-scroller.tsx"
+          "target": "@ui/nawet/message-scroller.tsx"
         }
       ],
       "name": "message-scroller",
@@ -704,7 +704,7 @@
         {
           "path": "packages/ui/src/components/nawet/message.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/message.tsx"
+          "target": "@ui/nawet/message.tsx"
         }
       ],
       "name": "message",
@@ -720,7 +720,7 @@
         {
           "path": "packages/ui/src/components/nawet/native-select.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/native-select.tsx"
+          "target": "@ui/nawet/native-select.tsx"
         }
       ],
       "name": "native-select",
@@ -740,7 +740,7 @@
         {
           "path": "packages/ui/src/components/nawet/navigation-menu.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/navigation-menu.tsx"
+          "target": "@ui/nawet/navigation-menu.tsx"
         }
       ],
       "name": "navigation-menu",
@@ -760,7 +760,7 @@
         {
           "path": "packages/ui/src/components/nawet/pagination.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/pagination.tsx"
+          "target": "@ui/nawet/pagination.tsx"
         }
       ],
       "name": "pagination",
@@ -781,7 +781,7 @@
         {
           "path": "packages/ui/src/components/nawet/popover.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/popover.tsx"
+          "target": "@ui/nawet/popover.tsx"
         }
       ],
       "name": "popover",
@@ -801,7 +801,7 @@
         {
           "path": "packages/ui/src/components/nawet/progress.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/progress.tsx"
+          "target": "@ui/nawet/progress.tsx"
         }
       ],
       "name": "progress",
@@ -817,7 +817,7 @@
         {
           "path": "packages/ui/src/components/nawet/providers.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/providers.tsx"
+          "target": "@ui/nawet/providers.tsx"
         }
       ],
       "name": "providers",
@@ -833,7 +833,7 @@
         {
           "path": "packages/ui/src/components/nawet/questionnaire.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/questionnaire.tsx"
+          "target": "@ui/nawet/questionnaire.tsx"
         }
       ],
       "name": "questionnaire",
@@ -854,7 +854,7 @@
         {
           "path": "packages/ui/src/components/nawet/radio-group.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/radio-group.tsx"
+          "target": "@ui/nawet/radio-group.tsx"
         }
       ],
       "name": "radio-group",
@@ -870,7 +870,7 @@
         {
           "path": "packages/ui/src/components/nawet/resizable.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/resizable.tsx"
+          "target": "@ui/nawet/resizable.tsx"
         }
       ],
       "name": "resizable",
@@ -886,7 +886,7 @@
         {
           "path": "packages/ui/src/components/nawet/scroll-area.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/scroll-area.tsx"
+          "target": "@ui/nawet/scroll-area.tsx"
         }
       ],
       "name": "scroll-area",
@@ -902,7 +902,7 @@
         {
           "path": "packages/ui/src/components/nawet/select.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/select.tsx"
+          "target": "@ui/nawet/select.tsx"
         }
       ],
       "name": "select",
@@ -923,7 +923,7 @@
         {
           "path": "packages/ui/src/components/nawet/separator.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/separator.tsx"
+          "target": "@ui/nawet/separator.tsx"
         }
       ],
       "name": "separator",
@@ -939,7 +939,7 @@
         {
           "path": "packages/ui/src/components/nawet/sheet.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/sheet.tsx"
+          "target": "@ui/nawet/sheet.tsx"
         }
       ],
       "name": "sheet",
@@ -960,7 +960,7 @@
         {
           "path": "packages/ui/src/components/nawet/sidebar.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/sidebar.tsx"
+          "target": "@ui/nawet/sidebar.tsx"
         }
       ],
       "name": "sidebar",
@@ -987,7 +987,7 @@
         {
           "path": "packages/ui/src/components/nawet/skeleton.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/skeleton.tsx"
+          "target": "@ui/nawet/skeleton.tsx"
         }
       ],
       "name": "skeleton",
@@ -1003,7 +1003,7 @@
         {
           "path": "packages/ui/src/components/nawet/slider.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/slider.tsx"
+          "target": "@ui/nawet/slider.tsx"
         }
       ],
       "name": "slider",
@@ -1019,7 +1019,7 @@
         {
           "path": "packages/ui/src/components/nawet/spinner.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/spinner.tsx"
+          "target": "@ui/nawet/spinner.tsx"
         }
       ],
       "name": "spinner",
@@ -1039,7 +1039,7 @@
         {
           "path": "packages/ui/src/components/nawet/switch.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/switch.tsx"
+          "target": "@ui/nawet/switch.tsx"
         }
       ],
       "name": "switch",
@@ -1055,7 +1055,7 @@
         {
           "path": "packages/ui/src/components/nawet/table.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/table.tsx"
+          "target": "@ui/nawet/table.tsx"
         }
       ],
       "name": "table",
@@ -1071,7 +1071,7 @@
         {
           "path": "packages/ui/src/components/nawet/tabs.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/tabs.tsx"
+          "target": "@ui/nawet/tabs.tsx"
         }
       ],
       "name": "tabs",
@@ -1087,7 +1087,7 @@
         {
           "path": "packages/ui/src/components/nawet/textarea.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/textarea.tsx"
+          "target": "@ui/nawet/textarea.tsx"
         }
       ],
       "name": "textarea",
@@ -1103,7 +1103,7 @@
         {
           "path": "packages/ui/src/components/nawet/toast.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/toast.tsx"
+          "target": "@ui/nawet/toast.tsx"
         }
       ],
       "name": "toast",
@@ -1124,7 +1124,7 @@
         {
           "path": "packages/ui/src/components/nawet/toggle-group.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/toggle-group.tsx"
+          "target": "@ui/nawet/toggle-group.tsx"
         }
       ],
       "name": "toggle-group",
@@ -1144,7 +1144,7 @@
         {
           "path": "packages/ui/src/components/nawet/toggle.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/toggle.tsx"
+          "target": "@ui/nawet/toggle.tsx"
         }
       ],
       "name": "toggle",
@@ -1160,7 +1160,7 @@
         {
           "path": "packages/ui/src/components/nawet/tooltip.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/tooltip.tsx"
+          "target": "@ui/nawet/tooltip.tsx"
         }
       ],
       "name": "tooltip",
@@ -1180,7 +1180,7 @@
         {
           "path": "packages/ui/src/components/nawet/trace.tsx",
           "type": "registry:ui",
-          "target": "@components/nawet/trace.tsx"
+          "target": "@ui/nawet/trace.tsx"
         }
       ],
       "name": "trace",

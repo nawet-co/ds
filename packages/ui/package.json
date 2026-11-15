@@ -13,11 +13,11 @@
     },
     "./globals.css": "./src/styles/globals.css",
     "./icons": "./src/lib/nawet/icons.tsx",
-    "./lib/highlighter": "./src/lib/nawet/highlighter.tsx",
-    "./lib/icons": "./src/lib/nawet/icons.tsx",
-    "./lib/*": "./src/lib/nawet/*.ts",
-    "./components/*": "./src/components/nawet/*.tsx",
-    "./hooks/*": "./src/hooks/nawet/*.ts",
+    "./components/*": "./src/components/*.tsx",
+    "./hooks/*": "./src/hooks/*.ts",
+    "./lib/nawet/highlighter": "./src/lib/nawet/highlighter.tsx",
+    "./lib/nawet/icons": "./src/lib/nawet/icons.tsx",
+    "./lib/*": "./src/lib/*.ts",
     "./package.json": "./package.json"
   },
   "scripts": {
