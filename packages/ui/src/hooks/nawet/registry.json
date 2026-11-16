@@ -1,0 +1,69 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "categories": ["hook"],
+      "dependencies": ["usehooks-ts"],
+      "description": "Nawet DS common hook.",
+      "files": [
+        {
+          "path": "common.ts",
+          "type": "registry:hook",
+          "target": "@hooks/nawet/common.ts"
+        }
+      ],
+      "name": "common",
+      "registryDependencies": [],
+      "title": "common",
+      "type": "registry:hook"
+    },
+    {
+      "categories": ["hook"],
+      "dependencies": [],
+      "description": "Nawet DS useControllable hook.",
+      "files": [
+        {
+          "path": "use-controllable.ts",
+          "type": "registry:hook",
+          "target": "@hooks/nawet/use-controllable.ts"
+        }
+      ],
+      "name": "use-controllable",
+      "registryDependencies": [],
+      "title": "useControllable",
+      "type": "registry:hook"
+    },
+    {
+      "categories": ["hook"],
+      "dependencies": [],
+      "description": "Nawet DS useHighlightedCode hook.",
+      "files": [
+        {
+          "path": "use-highlighted-code.ts",
+          "type": "registry:hook",
+          "target": "@hooks/nawet/use-highlighted-code.ts"
+        }
+      ],
+      "name": "use-highlighted-code",
+      "registryDependencies": ["nawet-co/ds/highlighter"],
+      "title": "useHighlightedCode",
+      "type": "registry:hook"
+    },
+    {
+      "categories": ["hook"],
+      "dependencies": [],
+      "description": "Nawet DS useMobile hook.",
+      "files": [
+        {
+          "path": "use-mobile.ts",
+          "type": "registry:hook",
+          "target": "@hooks/nawet/use-mobile.ts"
+        }
+      ],
+      "name": "use-mobile",
+      "registryDependencies": [],
+      "title": "useMobile",
+      "type": "registry:hook"
+    }
+  ]
+}

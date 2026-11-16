@@ -1,0 +1,1196 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "items": [
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Accordion component.",
+      "files": [
+        {
+          "path": "accordion.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/accordion.tsx"
+        }
+      ],
+      "name": "accordion",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Accordion",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Alert Dialog component.",
+      "files": [
+        {
+          "path": "alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/alert-dialog.tsx"
+        }
+      ],
+      "name": "alert-dialog",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Alert Dialog",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["class-variance-authority"],
+      "description": "Nawet DS Alert component.",
+      "files": [
+        {
+          "path": "alert.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/alert.tsx"
+        }
+      ],
+      "name": "alert",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Alert",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Aspect Ratio component.",
+      "files": [
+        {
+          "path": "aspect-ratio.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/aspect-ratio.tsx"
+        }
+      ],
+      "name": "aspect-ratio",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Aspect Ratio",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Attachment component.",
+      "files": [
+        {
+          "path": "attachment.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/attachment.tsx"
+        }
+      ],
+      "name": "attachment",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Attachment",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Avatar component.",
+      "files": [
+        {
+          "path": "avatar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/avatar.tsx"
+        }
+      ],
+      "name": "avatar",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Avatar",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Badge component.",
+      "files": [
+        {
+          "path": "badge.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/badge.tsx"
+        }
+      ],
+      "name": "badge",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Badge",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Breadcrumb component.",
+      "files": [
+        {
+          "path": "breadcrumb.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/breadcrumb.tsx"
+        }
+      ],
+      "name": "breadcrumb",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Breadcrumb",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Bubble component.",
+      "files": [
+        {
+          "path": "bubble.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/bubble.tsx"
+        }
+      ],
+      "name": "bubble",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Bubble",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Button Group component.",
+      "files": [
+        {
+          "path": "button-group.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/button-group.tsx"
+        }
+      ],
+      "name": "button-group",
+      "registryDependencies": [
+        "nawet-co/ds/separator",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Button Group",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Button component.",
+      "files": [
+        {
+          "path": "button.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/button.tsx"
+        }
+      ],
+      "name": "button",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Button",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["react-day-picker"],
+      "description": "Nawet DS Calendar component.",
+      "files": [
+        {
+          "path": "calendar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/calendar.tsx"
+        }
+      ],
+      "name": "calendar",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Calendar",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Card component.",
+      "files": [
+        {
+          "path": "card.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/card.tsx"
+        }
+      ],
+      "name": "card",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Card",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["embla-carousel-react"],
+      "description": "Nawet DS Carousel component.",
+      "files": [
+        {
+          "path": "carousel.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/carousel.tsx"
+        }
+      ],
+      "name": "carousel",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Carousel",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@tanstack/charts"],
+      "description": "Nawet DS Chart component.",
+      "files": [
+        {
+          "path": "chart.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/chart.tsx"
+        }
+      ],
+      "name": "chart",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Chart",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Checkbox component.",
+      "files": [
+        {
+          "path": "checkbox.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/checkbox.tsx"
+        }
+      ],
+      "name": "checkbox",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Checkbox",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["class-variance-authority"],
+      "description": "Nawet DS Code Block component.",
+      "files": [
+        {
+          "path": "code-block.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/code-block.tsx"
+        }
+      ],
+      "name": "code-block",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Code Block",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Collapsible component.",
+      "files": [
+        {
+          "path": "collapsible.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/collapsible.tsx"
+        }
+      ],
+      "name": "collapsible",
+      "registryDependencies": ["nawet-co/ds/theme"],
+      "title": "Collapsible",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Combobox component.",
+      "files": [
+        {
+          "path": "combobox.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/combobox.tsx"
+        }
+      ],
+      "name": "combobox",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/input-group",
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Combobox",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["cmdk"],
+      "description": "Nawet DS Command component.",
+      "files": [
+        {
+          "path": "command.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/command.tsx"
+        }
+      ],
+      "name": "command",
+      "registryDependencies": [
+        "nawet-co/ds/dialog",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/input-group",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Command",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Context Menu component.",
+      "files": [
+        {
+          "path": "context-menu.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/context-menu.tsx"
+        }
+      ],
+      "name": "context-menu",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Context Menu",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Dialog component.",
+      "files": [
+        {
+          "path": "dialog.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/dialog.tsx"
+        }
+      ],
+      "name": "dialog",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Dialog",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Direction component.",
+      "files": [
+        {
+          "path": "direction.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/direction.tsx"
+        }
+      ],
+      "name": "direction",
+      "registryDependencies": ["nawet-co/ds/theme"],
+      "title": "Direction",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Drawer component.",
+      "files": [
+        {
+          "path": "drawer.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/drawer.tsx"
+        }
+      ],
+      "name": "drawer",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Drawer",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Dropdown Menu component.",
+      "files": [
+        {
+          "path": "dropdown-menu.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/dropdown-menu.tsx"
+        }
+      ],
+      "name": "dropdown-menu",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Dropdown Menu",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["class-variance-authority"],
+      "description": "Nawet DS Empty component.",
+      "files": [
+        {
+          "path": "empty.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/empty.tsx"
+        }
+      ],
+      "name": "empty",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Empty",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["class-variance-authority"],
+      "description": "Nawet DS Field component.",
+      "files": [
+        {
+          "path": "field.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/field.tsx"
+        }
+      ],
+      "name": "field",
+      "registryDependencies": [
+        "nawet-co/ds/label",
+        "nawet-co/ds/separator",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Field",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Hover Card component.",
+      "files": [
+        {
+          "path": "hover-card.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/hover-card.tsx"
+        }
+      ],
+      "name": "hover-card",
+      "registryDependencies": [
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Hover Card",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["class-variance-authority"],
+      "description": "Nawet DS Input Group component.",
+      "files": [
+        {
+          "path": "input-group.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/input-group.tsx"
+        }
+      ],
+      "name": "input-group",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/input",
+        "nawet-co/ds/textarea",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Input Group",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["input-otp"],
+      "description": "Nawet DS Input OTP component.",
+      "files": [
+        {
+          "path": "input-otp.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/input-otp.tsx"
+        }
+      ],
+      "name": "input-otp",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Input OTP",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Input component.",
+      "files": [
+        {
+          "path": "input.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/input.tsx"
+        }
+      ],
+      "name": "input",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Input",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Item component.",
+      "files": [
+        {
+          "path": "item.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/item.tsx"
+        }
+      ],
+      "name": "item",
+      "registryDependencies": [
+        "nawet-co/ds/separator",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Item",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Kbd component.",
+      "files": [
+        {
+          "path": "kbd.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/kbd.tsx"
+        }
+      ],
+      "name": "kbd",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Kbd",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Label component.",
+      "files": [
+        {
+          "path": "label.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/label.tsx"
+        }
+      ],
+      "name": "label",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Label",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Marker component.",
+      "files": [
+        {
+          "path": "marker.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/marker.tsx"
+        }
+      ],
+      "name": "marker",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Marker",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Menubar component.",
+      "files": [
+        {
+          "path": "menubar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/menubar.tsx"
+        }
+      ],
+      "name": "menubar",
+      "registryDependencies": [
+        "nawet-co/ds/dropdown-menu",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Menubar",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@shadcn/react"],
+      "description": "Nawet DS Message Scroller component.",
+      "files": [
+        {
+          "path": "message-scroller.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/message-scroller.tsx"
+        }
+      ],
+      "name": "message-scroller",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Message Scroller",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Message component.",
+      "files": [
+        {
+          "path": "message.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/message.tsx"
+        }
+      ],
+      "name": "message",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Message",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Native Select component.",
+      "files": [
+        {
+          "path": "native-select.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/native-select.tsx"
+        }
+      ],
+      "name": "native-select",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Native Select",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Navigation Menu component.",
+      "files": [
+        {
+          "path": "navigation-menu.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/navigation-menu.tsx"
+        }
+      ],
+      "name": "navigation-menu",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Navigation Menu",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Pagination component.",
+      "files": [
+        {
+          "path": "pagination.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/pagination.tsx"
+        }
+      ],
+      "name": "pagination",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Pagination",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Popover component.",
+      "files": [
+        {
+          "path": "popover.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/popover.tsx"
+        }
+      ],
+      "name": "popover",
+      "registryDependencies": [
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Popover",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Progress component.",
+      "files": [
+        {
+          "path": "progress.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/progress.tsx"
+        }
+      ],
+      "name": "progress",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Progress",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Providers component.",
+      "files": [
+        {
+          "path": "providers.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/providers.tsx"
+        }
+      ],
+      "name": "providers",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/tooltip"],
+      "title": "Providers",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@shadcn/react"],
+      "description": "Nawet DS Questionnaire component.",
+      "files": [
+        {
+          "path": "questionnaire.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/questionnaire.tsx"
+        }
+      ],
+      "name": "questionnaire",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Questionnaire",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Radio Group component.",
+      "files": [
+        {
+          "path": "radio-group.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/radio-group.tsx"
+        }
+      ],
+      "name": "radio-group",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Radio Group",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["react-resizable-panels"],
+      "description": "Nawet DS Resizable component.",
+      "files": [
+        {
+          "path": "resizable.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/resizable.tsx"
+        }
+      ],
+      "name": "resizable",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Resizable",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Scroll Area component.",
+      "files": [
+        {
+          "path": "scroll-area.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/scroll-area.tsx"
+        }
+      ],
+      "name": "scroll-area",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Scroll Area",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Select component.",
+      "files": [
+        {
+          "path": "select.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/select.tsx"
+        }
+      ],
+      "name": "select",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Select",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Separator component.",
+      "files": [
+        {
+          "path": "separator.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/separator.tsx"
+        }
+      ],
+      "name": "separator",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Separator",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Sheet component.",
+      "files": [
+        {
+          "path": "sheet.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/sheet.tsx"
+        }
+      ],
+      "name": "sheet",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Sheet",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Sidebar component.",
+      "files": [
+        {
+          "path": "sidebar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/sidebar.tsx"
+        }
+      ],
+      "name": "sidebar",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/input",
+        "nawet-co/ds/separator",
+        "nawet-co/ds/sheet",
+        "nawet-co/ds/skeleton",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/tooltip",
+        "nawet-co/ds/use-mobile",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Sidebar",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Skeleton component.",
+      "files": [
+        {
+          "path": "skeleton.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/skeleton.tsx"
+        }
+      ],
+      "name": "skeleton",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Skeleton",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Slider component.",
+      "files": [
+        {
+          "path": "slider.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/slider.tsx"
+        }
+      ],
+      "name": "slider",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Slider",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Spinner component.",
+      "files": [
+        {
+          "path": "spinner.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/spinner.tsx"
+        }
+      ],
+      "name": "spinner",
+      "registryDependencies": [
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Spinner",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Switch component.",
+      "files": [
+        {
+          "path": "switch.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/switch.tsx"
+        }
+      ],
+      "name": "switch",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Switch",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Table component.",
+      "files": [
+        {
+          "path": "table.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/table.tsx"
+        }
+      ],
+      "name": "table",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Table",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Tabs component.",
+      "files": [
+        {
+          "path": "tabs.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/tabs.tsx"
+        }
+      ],
+      "name": "tabs",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Tabs",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Textarea component.",
+      "files": [
+        {
+          "path": "textarea.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/textarea.tsx"
+        }
+      ],
+      "name": "textarea",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Textarea",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react"],
+      "description": "Nawet DS Toast component.",
+      "files": [
+        {
+          "path": "toast.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/toast.tsx"
+        }
+      ],
+      "name": "toast",
+      "registryDependencies": [
+        "nawet-co/ds/button",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Toast",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Toggle Group component.",
+      "files": [
+        {
+          "path": "toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/toggle-group.tsx"
+        }
+      ],
+      "name": "toggle-group",
+      "registryDependencies": [
+        "nawet-co/ds/theme",
+        "nawet-co/ds/toggle",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Toggle Group",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "class-variance-authority"],
+      "description": "Nawet DS Toggle component.",
+      "files": [
+        {
+          "path": "toggle.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/toggle.tsx"
+        }
+      ],
+      "name": "toggle",
+      "registryDependencies": ["nawet-co/ds/theme", "nawet-co/ds/utils"],
+      "title": "Toggle",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": ["@base-ui/react", "motion"],
+      "description": "Nawet DS Tooltip component.",
+      "files": [
+        {
+          "path": "tooltip.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/tooltip.tsx"
+        }
+      ],
+      "name": "tooltip",
+      "registryDependencies": [
+        "nawet-co/ds/motion",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Tooltip",
+      "type": "registry:ui"
+    },
+    {
+      "categories": ["ui"],
+      "dependencies": [],
+      "description": "Nawet DS Trace component.",
+      "files": [
+        {
+          "path": "trace.tsx",
+          "type": "registry:ui",
+          "target": "@ui/nawet/trace.tsx"
+        }
+      ],
+      "name": "trace",
+      "registryDependencies": [
+        "nawet-co/ds/collapsible",
+        "nawet-co/ds/icons",
+        "nawet-co/ds/theme",
+        "nawet-co/ds/utils"
+      ],
+      "title": "Trace",
+      "type": "registry:ui"
+    }
+  ]
+}
