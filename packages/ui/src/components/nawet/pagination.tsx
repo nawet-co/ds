@@ -1,7 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/nawet/utils"
 
-import { Button } from "@/components/nawet/button"
+import { Button } from "@/components/ui/nawet/button"
 import { Icons } from "@/lib/nawet/icons"
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {

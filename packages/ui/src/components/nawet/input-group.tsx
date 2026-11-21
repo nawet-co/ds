@@ -4,9 +4,9 @@ import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/nawet/utils"
 
-import { Button } from "@/components/nawet/button"
-import { Input } from "@/components/nawet/input"
-import { Textarea } from "@/components/nawet/textarea"
+import { Button } from "@/components/ui/nawet/button"
+import { Input } from "@/components/ui/nawet/input"
+import { Textarea } from "@/components/ui/nawet/textarea"
 
 function InputGroup({ className, ...props }: React.ComponentProps<"div">) {
   return (

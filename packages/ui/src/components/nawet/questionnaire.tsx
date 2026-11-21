@@ -4,7 +4,7 @@ import * as React from "react"
 import { Questionnaire as QuestionnairePrimitive } from "@shadcn/react/questionnaire"
 import { cn } from "@/lib/nawet/utils"
 
-import { buttonVariants, type Button } from "@/components/nawet/button"
+import { buttonVariants, type Button } from "@/components/ui/nawet/button"
 import { Icons } from "@/lib/nawet/icons"
 
 function Questionnaire({

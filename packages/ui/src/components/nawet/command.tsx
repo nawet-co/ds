@@ -8,11 +8,11 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/components/nawet/dialog"
+} from "@/components/ui/nawet/dialog"
 import {
   InputGroup,
   InputGroupAddon,
-} from "@/components/nawet/input-group"
+} from "@/components/ui/nawet/input-group"
 import { Icons } from "@/lib/nawet/icons"
 
 function Command({

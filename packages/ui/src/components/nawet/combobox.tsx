@@ -6,13 +6,13 @@ import { cn } from "@/lib/nawet/utils"
 import { motion } from "motion/react"
 import { transitions } from "@/lib/nawet/motion"
 
-import { Button } from "@/components/nawet/button"
+import { Button } from "@/components/ui/nawet/button"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/components/nawet/input-group"
+} from "@/components/ui/nawet/input-group"
 import { Icons } from "@/lib/nawet/icons"
 
 const Combobox = ComboboxPrimitive.Root

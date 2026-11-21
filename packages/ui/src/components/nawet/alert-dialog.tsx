@@ -4,7 +4,7 @@ import { cn } from "@/lib/nawet/utils"
 import { motion } from "motion/react"
 
 import { transitions } from "@/lib/nawet/motion"
-import { Button } from "@/components/nawet/button"
+import { Button } from "@/components/ui/nawet/button"
 
 function AlertDialog({ ...props }: AlertDialogPrimitive.Root.Props) {
   return <AlertDialogPrimitive.Root data-slot="alert-dialog" {...props} />

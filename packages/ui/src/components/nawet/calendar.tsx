@@ -9,7 +9,7 @@ import {
   type Locale,
 } from "react-day-picker"
 
-import { Button, buttonVariants } from "@/components/nawet/button"
+import { Button, buttonVariants } from "@/components/ui/nawet/button"
 import { Icons } from "@/lib/nawet/icons"
 
 function Calendar({

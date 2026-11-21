@@ -5,7 +5,7 @@
  * It exists for IDE discoverability and package-level type imports.
  *
  * Import components, hooks, and utilities via their subpaths:
- *   import { Button } from "@/components/nawet/button"
+ *   import { Button } from "@/components/ui/nawet/button"
  *   import { useIsMobile } from "@/hooks/nawet/use-mobile"
  *   import { transitions } from "@/lib/nawet/motion"
  *   import { tokens } from "@/lib/nawet/tokens"

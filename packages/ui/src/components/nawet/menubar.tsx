@@ -19,7 +19,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/nawet/dropdown-menu"
+} from "@/components/ui/nawet/dropdown-menu"
 import { Icons } from "@/lib/nawet/icons"
 
 function Menubar({ className, ...props }: MenubarPrimitive.Props) {

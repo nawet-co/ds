@@ -5,7 +5,7 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/nawet/collapsible"
+} from "@/components/ui/nawet/collapsible"
 import { Icons } from "@/lib/nawet/icons"
 
 function Trace({ className, ...props }: React.ComponentProps<"div">) {

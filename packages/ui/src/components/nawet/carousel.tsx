@@ -4,7 +4,7 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 
-import { Button } from "@/components/nawet/button"
+import { Button } from "@/components/ui/nawet/button"
 import { Icons } from "@/lib/nawet/icons"
 
 type CarouselApi = UseEmblaCarouselType[1]

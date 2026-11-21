@@ -50,7 +50,7 @@ export default defineConfig({
       alias: [
         {
           find: /^@\/components\/ui\/(?<path>.*)$/u,
-          replacement: `${uiSrc}/components/nawet/$1`,
+          replacement: `${uiSrc}/components/$1`,
         },
         {
           find: /^@\/components\/(?<path>.*)$/u,

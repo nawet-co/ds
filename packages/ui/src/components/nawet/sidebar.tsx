@@ -5,22 +5,22 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/nawet/utils"
 
 import { useIsMobile } from "@/hooks/nawet/use-mobile"
-import { Button } from "@/components/nawet/button"
-import { Input } from "@/components/nawet/input"
-import { Separator } from "@/components/nawet/separator"
+import { Button } from "@/components/ui/nawet/button"
+import { Input } from "@/components/ui/nawet/input"
+import { Separator } from "@/components/ui/nawet/separator"
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from "@/components/nawet/sheet"
-import { Skeleton } from "@/components/nawet/skeleton"
+} from "@/components/ui/nawet/sheet"
+import { Skeleton } from "@/components/ui/nawet/skeleton"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/nawet/tooltip"
+} from "@/components/ui/nawet/tooltip"
 import { Icons } from "@/lib/nawet/icons"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"

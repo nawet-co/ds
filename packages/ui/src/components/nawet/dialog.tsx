@@ -6,7 +6,7 @@ import { cn } from "@/lib/nawet/utils"
 import { motion } from "motion/react"
 
 import { transitions } from "@/lib/nawet/motion"
-import { Button } from "@/components/nawet/button"
+import { Button } from "@/components/ui/nawet/button"
 import { Icons } from "@/lib/nawet/icons"
 
 function Dialog({ ...props }: DialogPrimitive.Root.Props) {

@@ -4,7 +4,7 @@ import * as React from "react"
 import { Toast as ToastPrimitive } from "@base-ui/react/toast"
 import { cn } from "@/lib/nawet/utils"
 
-import { Button } from "@/components/nawet/button"
+import { Button } from "@/components/ui/nawet/button"
 import { Icons } from "@/lib/nawet/icons"
 
 const toast = ToastPrimitive.createToastManager()

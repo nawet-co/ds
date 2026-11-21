@@ -20,6 +20,14 @@ import { PopoverDemo } from "../components/popover-demo";
         Install the full system with
         <code class="font-mono text-white">@nawet/base</code>.
       </p>
+      <p class="text-sm text-neutral-400">
+        In a monorepo, target the workspace with
+        <code class="font-mono text-white"
+          >-c apps/dashboard</code
+        >. Files install under that workspace's
+        <code class="font-mono text-white">ui</code> alias in a
+        <code class="font-mono text-white">nawet/</code> folder.
+      </p>
     </header>
     <div class="grid gap-6 pt-8">
       <RevenueChart client:load />
