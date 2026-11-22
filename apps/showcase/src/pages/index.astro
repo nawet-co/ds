@@ -11,22 +11,20 @@ import { PopoverDemo } from "../components/popover-demo";
         Nawet DS
       </h1>
       <p class="text-sm text-neutral-400">
-        An opinionated design system for shadcn, built on Base UI and Tailwind
-        CSS v4.
+        A framework-neutral core with a React implementation, built on Base UI
+        and Tailwind CSS v4.
       </p>
       <pre
-        class="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900 p-4 font-mono text-sm text-white"><code>pnpm dlx shadcn@latest add @nawet/button</code></pre>
+        class="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900 p-4 font-mono text-sm text-white"><code>pnpm add @nawet/ds-core @nawet/ds-react</code></pre>
       <p class="text-sm text-neutral-400">
-        Install the full system with
-        <code class="font-mono text-white">@nawet/base</code>.
+        Then import
+        <code class="font-mono text-white">@nawet/ds-react/styles.css</code> in
+        your global CSS.
       </p>
       <p class="text-sm text-neutral-400">
-        In a monorepo, target the workspace with
-        <code class="font-mono text-white"
-          >-c apps/dashboard</code
-        >. Files install under that workspace's
-        <code class="font-mono text-white">ui</code> alias in a
-        <code class="font-mono text-white">nawet/</code> folder.
+        Solid 2.0 support will live in
+        <code class="font-mono text-white">@nawet/ds-solid</code>, sharing the same
+        tokens and style contract.
       </p>
     </header>
     <div class="grid gap-6 pt-8">

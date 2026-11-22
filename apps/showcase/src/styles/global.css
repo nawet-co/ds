@@ -1,7 +1,7 @@
-@import "@nawet/ui/globals.css";
+@import "@nawet/ds-react/styles.css";
 
 /* Scan this app's own source files for Tailwind classes */
 @source "../**/*.{ts,tsx,astro}";
 
 /* Add your theme customizations here. */
-/* See the TailwindCSS v4 docs for more info: https://tailwindcss.com/docs/v4-beta */
+/* See the Tailwind CSS v4 docs for more info: https://tailwindcss.com/docs/v4-beta */

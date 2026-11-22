@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./vendor/shadcn.css";
+@import "@fontsource-variable/figtree";
+@import "@fontsource-variable/montserrat";
+
+@import "./tokens/scale.css";
+@import "./tokens/semantic.css";
+@import "./tokens/theme.css";
+@import "./tokens/chart.css";
+@import "./tokens/base.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Scan core sources for class names. Framework packages add their own @source. */
+@source "../**/*.{ts,tsx}";
+
+/*
+ * Consumers must add their own @source for their app files, e.g.:
+ *   @source "../../apps/showcase/src/**\/*.{ts,tsx,astro}";
+ */

@@ -1,26 +1,28 @@
 {
-  "name": "@nawet/design-system",
+  "name": "@nawet/ds",
   "private": true,
   "license": "MIT",
   "repository": "github:nawet-co/ds",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "infra"
   ],
   "type": "module",
   "scripts": {
     "dev": "vp run -r dev",
     "build": "vp run -r build",
     "check-types": "vp run -r check-types",
-    "check": "vp check && vp run -r check-types",
+    "check": "vp check && vp run -r check-types && pnpm tokens:check && pnpm test",
     "lint": "vp lint",
     "format": "vp fmt",
     "staged": "vp staged",
     "dev:showcase": "vp run --filter showcase dev:bare",
     "deploy": "vp run --filter @nawet/infra deploy",
     "destroy": "vp run --filter @nawet/infra destroy",
-    "registry:build": "pnpm --filter @nawet/ui registry:build",
-    "registry:validate": "pnpm --filter @nawet/ui registry:validate",
+    "tokens:generate": "pnpm --filter @nawet/ds-core tokens:generate",
+    "tokens:check": "pnpm --filter @nawet/ds-core tokens:check",
+    "test": "pnpm --filter @nawet/ds-core test",
     "env:generate": "varlock codegen --path ./apps/showcase/",
     "postinstall": "varlock codegen --path ./apps/showcase/",
     "clean:lockfile": "pnpm clean --lockfile && pnpm install",

@@ -1,0 +1,4 @@
+@import "@nawet/ds-core/globals.css";
+
+/* Scan React package sources for Tailwind classes. */
+@source "./**/*.{ts,tsx}";

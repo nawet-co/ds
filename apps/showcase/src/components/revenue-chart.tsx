@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@nawet/ui/components/nawet/card";
+} from "@nawet/ds-react/components/card";
 import {
   Chart,
   areaY,
@@ -14,7 +14,7 @@ import {
   scaleBand,
   scaleLinear,
   tooltip,
-} from "@nawet/ui/components/nawet/chart";
+} from "@nawet/ds-react/components/chart";
 
 interface RevenuePoint {
   month: string;

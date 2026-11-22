@@ -23,16 +23,12 @@ const config: KnipConfig = {
         "src/env.ts",
       ],
       ignoreDependencies: [
-        // Peer / implicit deps pulled in by Astro or Vite at build time
-        "tailwindcss",
         // Cloudflare Worker ambient types — no import, tsconfig reference only
         "@cloudflare/workers-types",
         // Workspace config package (types only, no imports)
         "@nawet/config",
         // Used by the alchemy build pipeline at deploy time, not statically imported
         "@alchemy.run/frontend-frameworks",
-        // motion is needed for pnpm to resolve it when @nawet/ui's components import it
-        "motion",
         // zod is used at runtime for env validation
         "zod",
       ],
@@ -46,7 +42,7 @@ const config: KnipConfig = {
     },
 
     // Infrastructure package (alchemy deploy/destroy scripts)
-    "packages/infra": {
+    "infra": {
       // alchemy.run.ts is the CLI entry point — the `alchemy` CLI reads it at runtime
       entry: ["alchemy.run.ts"],
       ignoreDependencies: [
@@ -56,19 +52,21 @@ const config: KnipConfig = {
       project: ["**/*.{ts,mts}"],
     },
 
-    // Shared UI component library
-    "packages/ui": {
+    // Framework-neutral tokens, styles, recipes, and contracts
+    "packages/core": {
+      entry: ["scripts/*.ts"],
+      project: ["src/**/*.{ts,tsx}", "scripts/**/*.ts"],
+    },
+
+    // React implementation
+    "packages/react": {
       // Components, hooks, and lib files are public API via package.json#exports.
-      // knip auto-detects package.json exports, so component globs are redundant.
-      entry: ["src/hooks/nawet/*.ts", "src/lib/nawet/*.{ts,tsx}"],
-      ignoreDependencies: [
-        // Build-time Vite plugin — used in Vite config, not imported in TS source
-        "@tailwindcss/vite",
-        // @turbo/gen — turborepo generator, CLI only
-        "@turbo/gen",
-        // Listed for schema validation; not currently used in source
-        "zod",
-      ],
+      project: ["src/**/*.{ts,tsx}"],
+    },
+
+    // Reserved Solid 2.0 implementation
+    "packages/solid": {
+      entry: ["src/index.ts"],
       project: ["src/**/*.{ts,tsx}"],
     },
   },

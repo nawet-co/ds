@@ -5,7 +5,7 @@ import {
   PopoverTitle,
   PopoverDescription,
   PopoverTrigger,
-} from "@nawet/ui/components/nawet/popover";
+} from "@nawet/ds-react/components/popover";
 
 export function PopoverDemo() {
   return (

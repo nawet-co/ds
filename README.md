@@ -1,82 +1,68 @@
 # Nawet DS
 
-The official design system of Nawet Co. A [shadcn](https://ui.shadcn.com/) registry of composable, accessible components built on Base UI and Tailwind CSS v4.
+The official design system of Nawet Co. A framework-neutral core with a React implementation built on Base UI and Tailwind CSS v4.
+
+## Packages
+
+```text
+@nawet/ds-core     tokens, CSS, recipes, contracts
+@nawet/ds-react    React components, hooks, providers
+@nawet/ds-solid    reserved for Solid 2.0
+```
+
+Repository layout:
+
+```text
+apps/showcase      documentation / preview app
+packages/core      design system core
+packages/react     React implementation
+packages/solid     reserved Solid implementation
+infra              Alchemy deployment stack
+```
+
+`@nawet/ds-core` does not depend on React or Solid. Framework packages own their components, hooks/signals, providers, primitives, Icons, and motion bindings.
 
 ## Install
 
-First, register the Nawet registry in your `components.json`:
-
-```json
-{
-  "registries": {
-    "@nawet": "https://nawet-ds.abbes.dev/r/{name}.json"
-  }
-}
-```
-
-### Single app
-
-Run the command at the app root, where `components.json` lives:
-
 ```bash
-pnpm dlx shadcn@latest add @nawet/button
+pnpm add @nawet/ds-react
 ```
 
-Install the whole system:
+`@nawet/ds-core` is installed transitively. Add it directly if you use token values in JavaScript.
 
-```bash
-pnpm dlx shadcn@latest add @nawet/base
+Import the framework stylesheet in your global CSS:
+
+```css
+@import "tailwindcss";
+@import "@nawet/ds-react/styles.css";
+
+/* Scan your app's files for Tailwind classes */
+@source "../src/**/*.{ts,tsx}";
 ```
 
-### Monorepo
+Use components from subpaths:
 
-shadcn needs a single workspace as the install target. Run the command from
-that workspace, or point at it with `-c`:
-
-```bash
-# app workspace
-pnpm dlx shadcn@latest add @nawet/button -c apps/dashboard
-
-# shared design-system package
-pnpm dlx shadcn@latest add @nawet/button -c packages/design-system
+```tsx
+import { Button } from "@nawet/ds-react/components/button";
 ```
 
-Running at the monorepo root without `-c` is rejected by shadcn. Files are
-installed under the target workspace's `ui` alias, namespaced as `nawet/`
-(default: `src/components/ui/nawet/`). Components import each other from that
-same alias, so keep it consistent across the workspace.
-
-Or install from GitHub without the registry config:
-
-```bash
-pnpm dlx shadcn@latest add nawet-co/ds/button
-```
+There is no shadcn registry install step. Components are normal package imports.
 
 ## Requirements
 
-React 19+, Tailwind CSS v4, React Compiler, and `@import "shadcn/tailwind.css";` in your global CSS.
-
-Your `components.json` must define the `ui`, `lib`, and `hooks` aliases — the
-registry installs into `ui` and imports shared code from `lib`/`hooks`:
-
-```json
-{
-  "aliases": {
-    "components": "@/components",
-    "ui": "@/components/ui",
-    "lib": "@/lib",
-    "hooks": "@/hooks",
-    "utils": "@/lib/utils"
-  }
-}
-```
+- Tailwind CSS v4
+- React 19+ for `@nawet/ds-react`
+- React Compiler is recommended
 
 ## Development
 
 ```bash
-pnpm registry:build
-pnpm registry:validate
+pnpm tokens:generate   # regenerate tokens.ts from the token CSS
+pnpm tokens:check      # fail if the generated token file is stale
+pnpm test              # token generator and validation tests
 ```
+
+Design tokens live in `packages/core/src/styles/tokens/`. See the [tokens README](packages/core/src/styles/tokens/README.md) for the pipeline.
 
 Components and usage: [nawet-ds.abbes.dev](https://nawet-ds.abbes.dev)
 
