@@ -4,10 +4,11 @@ import Header from "../components/Header.astro";
 import { NawetProvider } from "@nawet/ds-react/components/providers";
 
 interface Props {
+  chrome?: boolean;
   title?: string;
 }
 
-const { title = "NAWET DS" } = Astro.props;
+const { chrome = true, title = "NAWET DS" } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +22,7 @@ const { title = "NAWET DS" } = Astro.props;
   </head>
   <body class="min-h-screen bg-neutral-950 text-white">
     <NawetProvider client:load>
-      <Header />
+      {chrome ? <Header /> : null}
       <slot />
     </NawetProvider>
   </body>

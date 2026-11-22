@@ -1,35 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { RevenueChart } from "../components/revenue-chart";
-import { PopoverDemo } from "../components/popover-demo";
+import { ShowcaseHome } from "../components/showcase-home";
 ---
 
-<Layout title="Nawet DS">
-  <div class="container mx-auto max-w-3xl px-4 py-8">
-    <header class="space-y-3">
-      <h1 class="font-heading text-3xl font-semibold tracking-tight">
-        Nawet DS
-      </h1>
-      <p class="text-sm text-neutral-400">
-        A framework-neutral core with a React implementation, built on Base UI
-        and Tailwind CSS v4.
-      </p>
-      <pre
-        class="overflow-x-auto rounded-lg border border-neutral-800 bg-neutral-900 p-4 font-mono text-sm text-white"><code>pnpm add @nawet/ds-core @nawet/ds-react</code></pre>
-      <p class="text-sm text-neutral-400">
-        Then import
-        <code class="font-mono text-white">@nawet/ds-react/styles.css</code> in
-        your global CSS.
-      </p>
-      <p class="text-sm text-neutral-400">
-        Solid 2.0 support will live in
-        <code class="font-mono text-white">@nawet/ds-solid</code>, sharing the same
-        tokens and style contract.
-      </p>
-    </header>
-    <div class="grid gap-6 pt-8">
-      <RevenueChart client:load />
-      <PopoverDemo client:load />
-    </div>
-  </div>
+<Layout chrome={false} title="Nawet DS · Showcase">
+  <ShowcaseHome client:load />
 </Layout>
