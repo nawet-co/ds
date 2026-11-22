@@ -8,6 +8,14 @@ import * as React from "react";
 
 import { useIsMobile } from "../hooks/use-mobile";
 import { Icons } from "../lib/icons";
+import {
+  clamp,
+  favourite,
+  parseStoredSnap,
+  record,
+  type Sample,
+  type StoredSnap,
+} from "../lib/snap-point";
 import { Button } from "./button";
 import { Input } from "./input";
 import { Separator } from "./separator";
@@ -18,15 +26,22 @@ import {
   SheetHeader,
   SheetTitle,
 } from "./sheet";
+import { useSidebarDrag } from "./sidebar-resize";
 import { Skeleton } from "./skeleton";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_WIDTH = "16rem";
+const SIDEBAR_WIDTH_PX = 256;
+const SIDEBAR_WIDTH_MIN = 192;
+const SIDEBAR_WIDTH_MAX = 512;
 const SIDEBAR_WIDTH_MOBILE = "18rem";
 const SIDEBAR_WIDTH_ICON = "3rem";
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
+// Snap learning and persistence are modeled on "Snappy resizable panels" by
+// Harsh Sharma (https://imharsh.in/snappy-resizable-panels). See lib/snap-point.ts.
+const SIDEBAR_SNAP_STORAGE_KEY = "nawet:sidebar-snap";
 
 type SidebarContextProps = {
   state: "expanded" | "collapsed";
@@ -36,7 +51,32 @@ type SidebarContextProps = {
   setOpenMobile: (open: boolean) => void;
   isMobile: boolean;
   toggleSidebar: () => void;
+  sidebarWidth: number | null;
+  previewSidebarWidth: (px: number) => number;
+  commitSidebarWidth: (px: number) => void;
+  getSidebarWidth: () => number | null;
+  getSnapPoint: () => number | null;
 };
+
+function clampSidebarWidth(px: number) {
+  return clamp(px, SIDEBAR_WIDTH_MIN, SIDEBAR_WIDTH_MAX);
+}
+
+function readSidebarSnap() {
+  try {
+    return parseStoredSnap(localStorage.getItem(SIDEBAR_SNAP_STORAGE_KEY));
+  } catch {
+    return null;
+  }
+}
+
+function writeSidebarSnap(value: StoredSnap) {
+  try {
+    localStorage.setItem(SIDEBAR_SNAP_STORAGE_KEY, JSON.stringify(value));
+  } catch {
+    // Private mode and blocked storage still leave the drag working.
+  }
+}
 
 const SidebarContext = React.createContext<SidebarContextProps | null>(null);
 
@@ -56,6 +96,7 @@ function SidebarProvider({
   className,
   style,
   children,
+  ref,
   ...props
 }: React.ComponentProps<"div"> & {
   defaultOpen?: boolean;
@@ -64,6 +105,18 @@ function SidebarProvider({
 }) {
   const isMobile = useIsMobile();
   const [openMobile, setOpenMobile] = React.useState(false);
+  const wrapperRef = React.useRef<HTMLDivElement>(null);
+  const widthRef = React.useRef<number | null>(null);
+  const samplesRef = React.useRef<Sample[]>([]);
+  const snapPointRef = React.useRef<number | null>(null);
+  const [widthPx, setWidthPx] = React.useState<number | null>(null);
+  const [samples, setSamples] = React.useState<Sample[]>([]);
+  samplesRef.current = samples;
+  const snapPoint = React.useMemo(
+    () => favourite(samples)?.width ?? null,
+    [samples]
+  );
+  snapPointRef.current = snapPoint;
 
   // This is the internal state of the sidebar.
   // We use openProp and setOpenProp for control from outside the component.
@@ -105,6 +158,58 @@ function SidebarProvider({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [toggleSidebar]);
 
+  const previewSidebarWidth = React.useCallback((px: number) => {
+    const next = clampSidebarWidth(px);
+    widthRef.current = next;
+    wrapperRef.current?.style.setProperty("--sidebar-width", `${next}px`);
+    return next;
+  }, []);
+
+  const commitSidebarWidth = React.useCallback((px: number) => {
+    const next = clampSidebarWidth(Math.round(px));
+    widthRef.current = next;
+    wrapperRef.current?.style.setProperty("--sidebar-width", `${next}px`);
+    const recorded = record(samplesRef.current, next, Date.now());
+    samplesRef.current = recorded;
+    setSamples(recorded);
+    setWidthPx(next);
+    writeSidebarSnap({ width: next, samples: recorded });
+  }, []);
+
+  const getSidebarWidth = React.useCallback(() => widthRef.current, []);
+  const getSnapPoint = React.useCallback(() => snapPointRef.current, []);
+
+  React.useEffect(() => {
+    const stored = readSidebarSnap();
+    if (!stored) return;
+    const sidebarNode = wrapperRef.current?.querySelector<HTMLElement>(
+      "[data-slot=sidebar]"
+    );
+    sidebarNode?.setAttribute("data-resizing", "true");
+    if (stored.samples.length > 0) setSamples(stored.samples);
+    if (stored.width != null) {
+      const next = clampSidebarWidth(stored.width);
+      widthRef.current = next;
+      setWidthPx(next);
+    }
+    let frame = requestAnimationFrame(() => {
+      frame = requestAnimationFrame(() => {
+        sidebarNode?.removeAttribute("data-resizing");
+      });
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  // A pointer move writes the width on the node. The style prop would put the
+  // last committed width back on the next render, so re-apply the live one.
+  React.useLayoutEffect(() => {
+    if (widthRef.current == null) return;
+    wrapperRef.current?.style.setProperty(
+      "--sidebar-width",
+      `${widthRef.current}px`
+    );
+  });
+
   // We add a state so that we can do data-state="expanded" or "collapsed".
   // This makes it easier to style the sidebar with Tailwind classes.
   const state = open ? "expanded" : "collapsed";
@@ -118,17 +223,40 @@ function SidebarProvider({
       openMobile,
       setOpenMobile,
       toggleSidebar,
+      sidebarWidth: widthPx,
+      previewSidebarWidth,
+      commitSidebarWidth,
+      getSidebarWidth,
+      getSnapPoint,
     }),
-    [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
+    [
+      state,
+      open,
+      setOpen,
+      isMobile,
+      openMobile,
+      setOpenMobile,
+      toggleSidebar,
+      widthPx,
+      previewSidebarWidth,
+      commitSidebarWidth,
+      getSidebarWidth,
+      getSnapPoint,
+    ]
   );
 
   return (
     <SidebarContext.Provider value={contextValue}>
       <div
         data-slot="sidebar-wrapper"
+        ref={(node) => {
+          wrapperRef.current = node;
+          if (typeof ref === "function") ref(node);
+          else if (ref) ref.current = node;
+        }}
         style={
           {
-            "--sidebar-width": SIDEBAR_WIDTH,
+            "--sidebar-width": widthPx == null ? SIDEBAR_WIDTH : `${widthPx}px`,
             "--sidebar-width-icon": SIDEBAR_WIDTH_ICON,
             ...style,
           } as React.CSSProperties
@@ -214,7 +342,7 @@ function Sidebar({
       <div
         data-slot="sidebar-gap"
         className={cn(
-          "relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear",
+          "relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear group-data-[resizing=true]:transition-none!",
           "group-data-[collapsible=offcanvas]:w-0",
           "group-data-[side=right]:rotate-180",
           variant === "floating" || variant === "inset"
@@ -226,7 +354,7 @@ function Sidebar({
         data-slot="sidebar-container"
         data-side={side}
         className={cn(
-          "fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear data-[side=left]:left-0 data-[side=left]:group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] data-[side=right]:right-0 data-[side=right]:group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)] md:flex",
+          "fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear group-data-[resizing=true]:transition-none! data-[side=left]:left-0 data-[side=left]:group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] data-[side=right]:right-0 data-[side=right]:group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)] md:flex",
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"
@@ -273,27 +401,94 @@ function SidebarTrigger({
   );
 }
 
-function SidebarRail({ className, ...props }: React.ComponentProps<"button">) {
-  const { toggleSidebar } = useSidebar();
+function SidebarRail({
+  className,
+  ref,
+  onPointerDown,
+  onPointerMove,
+  onPointerUp,
+  onPointerCancel,
+  onKeyDown,
+  onKeyUp,
+  onBlur,
+  ...props
+}: React.ComponentProps<"div">) {
+  const sidebar = useSidebar();
+  const drag = useSidebarDrag(sidebar, {
+    min: SIDEBAR_WIDTH_MIN,
+    max: SIDEBAR_WIDTH_MAX,
+    fallback: SIDEBAR_WIDTH_PX,
+  });
+  const railRef = React.useRef<HTMLDivElement>(null);
+
+  React.useLayoutEffect(() => {
+    if (drag.dragging.current) {
+      drag.paint(railRef.current);
+      return;
+    }
+    drag.liveWidth.current = sidebar.sidebarWidth ?? SIDEBAR_WIDTH_PX;
+    drag.snapped.current = false;
+    drag.paint(railRef.current);
+  }, [
+    drag.dragging,
+    drag.liveWidth,
+    drag.paint,
+    drag.snapped,
+    sidebar.sidebarWidth,
+  ]);
+
+  if (sidebar.state !== "expanded" || sidebar.isMobile) return null;
 
   return (
-    <button
+    <div
+      {...props}
+      ref={(node) => {
+        railRef.current = node;
+        if (typeof ref === "function") ref(node);
+        else if (ref) ref.current = node;
+      }}
       data-sidebar="rail"
       data-slot="sidebar-rail"
-      aria-label="Toggle Sidebar"
-      tabIndex={-1}
-      onClick={toggleSidebar}
-      title="Toggle Sidebar"
+      role="separator"
+      aria-orientation="vertical"
+      aria-label="Resize Sidebar"
+      aria-valuemin={SIDEBAR_WIDTH_MIN}
+      aria-valuemax={SIDEBAR_WIDTH_MAX}
+      aria-valuenow={Math.round(sidebar.sidebarWidth ?? SIDEBAR_WIDTH_PX)}
+      tabIndex={0}
+      title="Resize Sidebar"
       className={cn(
-        "hover:after:bg-sidebar-border absolute inset-y-0 z-20 hidden w-4 transition-all ease-linear group-data-[side=left]:-right-4 group-data-[side=right]:left-0 after:absolute after:inset-y-0 after:start-1/2 after:w-[2px] sm:flex ltr:-translate-x-1/2 rtl:-translate-x-1/2",
-        "in-data-[side=left]:cursor-w-resize in-data-[side=right]:cursor-e-resize rtl:in-data-[side=left]:cursor-e-resize rtl:in-data-[side=right]:cursor-w-resize",
-        "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize rtl:[[data-side=left][data-state=collapsed]_&]:cursor-w-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize rtl:[[data-side=right][data-state=collapsed]_&]:cursor-e-resize",
-        "hover:group-data-[collapsible=offcanvas]:bg-sidebar group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:start-full rtl:group-data-[collapsible=offcanvas]:-translate-x-0",
-        "[[data-side=left][data-collapsible=offcanvas]_&]:-end-2",
-        "[[data-side=right][data-collapsible=offcanvas]_&]:-start-2",
+        "hover:after:bg-sidebar-border focus-visible:after:bg-sidebar-ring data-snapped:after:bg-sidebar-ring absolute inset-y-0 z-20 hidden w-4 cursor-ew-resize touch-none transition-all ease-linear select-none group-data-[side=left]:-right-4 group-data-[side=right]:left-0 after:absolute after:inset-y-0 after:start-1/2 after:w-[2px] focus-visible:outline-hidden sm:flex ltr:-translate-x-1/2 rtl:-translate-x-1/2",
         className
       )}
-      {...props}
+      onPointerDown={(event) => {
+        onPointerDown?.(event);
+        if (!event.defaultPrevented) drag.onPointerDown(event);
+      }}
+      onPointerMove={(event) => {
+        onPointerMove?.(event);
+        if (!event.defaultPrevented) drag.onPointerMove(event);
+      }}
+      onPointerUp={(event) => {
+        onPointerUp?.(event);
+        if (!event.defaultPrevented) drag.onPointerUp(event);
+      }}
+      onPointerCancel={(event) => {
+        onPointerCancel?.(event);
+        if (!event.defaultPrevented) drag.onPointerCancel(event);
+      }}
+      onKeyDown={(event) => {
+        onKeyDown?.(event);
+        if (!event.defaultPrevented) drag.onKeyDown(event);
+      }}
+      onKeyUp={(event) => {
+        onKeyUp?.(event);
+        if (!event.defaultPrevented) drag.onKeyUp(event);
+      }}
+      onBlur={(event) => {
+        onBlur?.(event);
+        drag.onBlur(event);
+      }}
     />
   );
 }
