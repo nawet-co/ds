@@ -9,6 +9,7 @@ Framework-neutral foundation for Nawet DS.
 - shared `cn`
 - framework-neutral CVA recipes
 - shared slot/state contracts
+- configuration types and defaults
 - generated token values in `src/tokens.ts`
 
 ## Does not own
@@ -29,6 +30,7 @@ Framework packages import tokens and recipes from here and remain responsible fo
 ```ts
 import { cn } from "@nawet/ds-core/utils";
 import { tokens } from "@nawet/ds-core/tokens";
+import { defaultNawetConfig, type NawetConfig } from "@nawet/ds-core";
 ```
 
 ## Token pipeline

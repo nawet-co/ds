@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@nawet/ds-core/utils";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,

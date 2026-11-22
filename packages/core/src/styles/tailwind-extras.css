@@ -1,8 +1,6 @@
 /*
- * Vendored from shadcn v4.23.0 (`shadcn/dist/tailwind.css`).
- * MIT licensed: https://github.com/shadcn-ui/ui
- *
- * Kept local so @nawet/ds-core does not depend on the shadcn CLI package.
+ * Tailwind variants and utilities used by the component layer.
+ * Portions derive from shadcn/ui, MIT licensed. See THIRD_PARTY_NOTICES.md.
  */
 
 @theme inline {

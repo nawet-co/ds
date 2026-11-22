@@ -8,6 +8,7 @@
 :root {
   /* Base shape and density */
   --radius: 0.625rem;
+  --disabled-opacity: 0.5;
 
   /* Motion durations */
   --duration-instant: 0ms;

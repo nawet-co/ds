@@ -1,3 +1,5 @@
+"use client";
+
 import { Menu as MenuPrimitive } from "@base-ui/react/menu";
 import { cn } from "@nawet/ds-core/utils";
 import { motion } from "motion/react";

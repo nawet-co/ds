@@ -1,3 +1,5 @@
+"use client";
+
 import { cn } from "@nawet/ds-core/utils";
 import { OTPInput, OTPInputContext } from "input-otp";
 import * as React from "react";

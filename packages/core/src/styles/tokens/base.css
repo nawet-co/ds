@@ -1,8 +1,8 @@
 /**
  * Base element styles.
  *
- * Kept as plain declarations so they do not depend on Tailwind's `@apply`
- * resolution order at build time.
+ * Plain declarations keep these independent of Tailwind `@apply` resolution
+ * order. Raw HTML should look intentional without requiring utility classes.
  */
 
 @layer base {
@@ -14,6 +14,14 @@
     color-scheme: dark;
   }
 
+  [data-density="compact"] {
+    --spacing: 0.22rem;
+  }
+
+  [data-density="comfortable"] {
+    --spacing: 0.28rem;
+  }
+
   * {
     border-color: var(--border);
     outline-color: color-mix(in oklch, var(--ring) 50%, transparent);
@@ -22,10 +30,138 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+    font-family: var(--font-sans);
+    line-height: var(--leading-normal);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block: 0;
+    color: var(--foreground);
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--tracking-tight);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--text-4xl);
+    line-height: var(--text-4xl--line-height);
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+    line-height: var(--text-3xl--line-height);
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+    line-height: var(--text-2xl--line-height);
+  }
+
+  h4 {
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
+  }
+
+  h5 {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+  }
+
+  h6 {
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration-line: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  strong,
+  b {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  small {
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-mono);
+  }
+
+  code {
+    font-size: 0.875em;
+  }
+
+  pre {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    overflow-x: auto;
+  }
+
+  pre code {
+    font-size: inherit;
+  }
+
+  blockquote {
+    margin-block: 0;
+    border-inline-start: 2px solid var(--border);
+    padding-inline-start: 1rem;
+    color: var(--muted-foreground);
+  }
+
+  hr {
+    border-color: var(--border);
+  }
+
+  ul:not([class]) {
+    list-style: disc;
+    padding-inline-start: 1.25rem;
+  }
+
+  ol:not([class]) {
+    list-style: decimal;
+    padding-inline-start: 1.25rem;
   }
 
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+}
+
+[data-motion="reduced"] *,
+[data-motion="reduced"] *::before,
+[data-motion="reduced"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+  transition-duration: 0.01ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -70,7 +70,7 @@ const config: KnipConfig = {
     // React implementation
     "packages/react": {
       // Components, hooks, and lib files are public API via package.json#exports.
-      project: ["src/**/*.{ts,tsx}"],
+      project: ["src/**/*.{ts,tsx}", "scripts/**/*.ts"],
     },
 
     // Reserved Solid 2.0 implementation

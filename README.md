@@ -2,6 +2,8 @@
 
 The official design system of Nawet Co. A framework-neutral core with a React implementation built on Base UI and Tailwind CSS v4.
 
+Components are adapted from [shadcn/ui](https://ui.shadcn.com/) (MIT). Nawet owns the design tokens, styling, motion, composition, and original components.
+
 ## Packages
 
 ```text
@@ -48,7 +50,7 @@ Use components from subpaths:
 import { Button } from "@nawet/ds-react/components/button";
 ```
 
-There is no shadcn registry install step. Components are normal package imports.
+Components are normal package imports. There is no registry install step.
 
 ## CLI
 

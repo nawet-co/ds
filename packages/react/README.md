@@ -1,6 +1,6 @@
 # @nawet/ds-react
 
-React implementation of Nawet DS, built on Base UI.
+React implementation of Nawet DS, built on Base UI. Components are adapted from shadcn/ui (MIT); the Nawet styling, tokens, motion, and composition are ours.
 
 ## Owns
 
@@ -29,3 +29,5 @@ import { Providers } from "@nawet/ds-react/components/providers";
 ```
 
 `@nawet/ds-react/styles.css` imports the framework-neutral core styles and scans this package's source files for Tailwind classes.
+
+See [CONTRACT.md](./CONTRACT.md) for the component API and DOM contract.

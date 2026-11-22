@@ -31,6 +31,23 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
+  --primary-hover: color-mix(in oklch, var(--primary), var(--background) 12%);
+  --primary-active: color-mix(in oklch, var(--primary), var(--background) 20%);
+  --secondary-hover: color-mix(
+    in oklch,
+    var(--secondary),
+    var(--foreground) 5%
+  );
+  --destructive-hover: color-mix(
+    in oklch,
+    var(--destructive),
+    var(--background) 12%
+  );
+  --surface-raised: var(--card);
+  --surface-overlay: var(--popover);
+  --border-strong: oklch(0.82 0 0);
+  --ring-offset: var(--background);
+  --overlay: oklch(0 0 0 / 0.45);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -71,6 +88,23 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
+  --primary-hover: color-mix(in oklch, var(--primary), var(--background) 12%);
+  --primary-active: color-mix(in oklch, var(--primary), var(--background) 20%);
+  --secondary-hover: color-mix(
+    in oklch,
+    var(--secondary),
+    var(--foreground) 5%
+  );
+  --destructive-hover: color-mix(
+    in oklch,
+    var(--destructive),
+    var(--background) 12%
+  );
+  --surface-raised: var(--card);
+  --surface-overlay: var(--popover);
+  --border-strong: oklch(1 0 0 / 20%);
+  --ring-offset: var(--background);
+  --overlay: oklch(0 0 0 / 0.65);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);

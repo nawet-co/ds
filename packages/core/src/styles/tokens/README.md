@@ -12,7 +12,7 @@ The CSS files in this folder are the source of truth for framework-neutral desig
 
 `scale.css` uses `@theme static` so every scale token is emitted as a CSS variable even when no utility currently uses it. `theme.css` uses `@theme inline` because its values reference mode-aware variables.
 
-`globals.css` imports these files and `vendor/shadcn.css` (MIT, vendored Tailwind variants/utilities). Framework packages import `@nawet/ds-core/globals.css` and add their own `@source` for component classes.
+`globals.css` imports these files and `tailwind-extras.css` (Tailwind variants and utilities used by the component layer). Framework packages import `@nawet/ds-core/globals.css` and add their own `@source` for component classes.
 
 The generator turns the CSS into:
 
