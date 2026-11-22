@@ -1,21 +1,16 @@
-import * as React from "react";
+import { useMediaQuery } from "usehooks-ts";
 
 const MOBILE_BREAKPOINT = 768;
 
-export function useIsMobile() {
-  const [isMobile, setIsMobile] = React.useState<boolean | undefined>(
-    undefined
-  );
+const MOBILE_QUERY = `(max-width: ${MOBILE_BREAKPOINT - 1}px)`;
 
-  React.useEffect(() => {
-    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
-    const onChange = () => {
-      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
-    };
-    mql.addEventListener("change", onChange);
-    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
-    return () => mql.removeEventListener("change", onChange);
-  }, []);
-
-  return !!isMobile;
+/**
+ * Matches viewports narrower than the mobile breakpoint.
+ *
+ * `initializeWithValue: false` keeps server output and the first client render
+ * in agreement (no hydration mismatch). The hook then resolves the real value
+ * in a layout effect, so mobile never flashes the desktop layout first.
+ */
+export function useIsMobile(): boolean {
+  return useMediaQuery(MOBILE_QUERY, { initializeWithValue: false });
 }
