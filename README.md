@@ -8,6 +8,7 @@ The official design system of Nawet Co. A framework-neutral core with a React im
 @nawet/ds-core     tokens, CSS, recipes, contracts
 @nawet/ds-react    React components, hooks, providers
 @nawet/ds-solid    reserved for Solid 2.0
+@nawet/ds-cli      framework-aware installer and doctor
 ```
 
 Repository layout:
@@ -17,6 +18,7 @@ apps/showcase      documentation / preview app
 packages/core      design system core
 packages/react     React implementation
 packages/solid     reserved Solid implementation
+packages/cli       installer and doctor CLI
 infra              Alchemy deployment stack
 ```
 
@@ -47,6 +49,15 @@ import { Button } from "@nawet/ds-react/components/button";
 ```
 
 There is no shadcn registry install step. Components are normal package imports.
+
+## CLI
+
+```bash
+pnpm dlx @nawet/ds-cli init
+pnpm dlx @nawet/ds-cli doctor
+```
+
+The CLI detects the framework and workspace, confirms the plan, installs the core and framework packages, and can add the stylesheet import to the app's Tailwind entrypoint. See [packages/cli](packages/cli/README.md).
 
 ## Requirements
 

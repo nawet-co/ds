@@ -35,14 +35,8 @@ const config: KnipConfig = {
       project: ["src/**/*.{ts,tsx,astro}"],
     },
 
-    // Shared TypeScript config package — no source, just config files
-    "packages/config": {
-      entry: [],
-      project: [],
-    },
-
     // Infrastructure package (alchemy deploy/destroy scripts)
-    "infra": {
+    infra: {
       // alchemy.run.ts is the CLI entry point — the `alchemy` CLI reads it at runtime
       entry: ["alchemy.run.ts"],
       ignoreDependencies: [
@@ -50,6 +44,21 @@ const config: KnipConfig = {
         "zod",
       ],
       project: ["**/*.{ts,mts}"],
+    },
+
+    // Framework-aware installation and diagnostics CLI
+    "packages/cli": {
+      ignoreDependencies: [
+        // Dynamically resolved from the consumer app by the doctor command
+        "react",
+      ],
+      project: ["src/**/*.ts"],
+    },
+
+    // Shared TypeScript config package — no source, just config files
+    "packages/config": {
+      entry: [],
+      project: [],
     },
 
     // Framework-neutral tokens, styles, recipes, and contracts
