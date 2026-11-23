@@ -1,0 +1,33 @@
+@layer ui-sdk;
+
+@import "@nawet/ds-core/globals.css";
+@import "@ui-sdk/core/web.css" layer(components);
+
+/* Scan this package's sources for Tailwind classes. */
+@source "./**/*.{ts,tsx}";
+
+/*
+ * Map UI SDK's theme variables onto Nawet tokens so its parts inherit the
+ * design system instead of UI SDK's default palette.
+ */
+:root {
+  --ui-background: var(--background);
+  --ui-foreground: var(--foreground);
+  --ui-muted: var(--muted);
+  --ui-muted-foreground: var(--muted-foreground);
+  --ui-border: var(--border);
+  --ui-ring: var(--ring);
+  --ui-ring-border: var(--ring);
+  --ui-radius: var(--radius);
+  --ui-primary: var(--foreground);
+  --ui-primary-foreground: var(--background);
+  --ui-destructive: var(--destructive);
+  --ui-overlay: var(--overlay);
+  --ui-font-sans: var(--font-sans);
+  --ui-font-mono: var(--font-mono);
+}
+
+/* Empty stars use the muted text color; the filled part uses the foreground. */
+[data-slot="rating"] {
+  --ui-input: var(--muted-foreground);
+}

@@ -22,7 +22,7 @@
     "destroy": "vp run --filter @nawet/infra destroy",
     "tokens:generate": "pnpm --filter @nawet/ds-core tokens:generate",
     "tokens:check": "pnpm --filter @nawet/ds-core tokens:check",
-    "test": "pnpm --filter @nawet/ds-core test && pnpm --filter @nawet/ds-react test && pnpm --filter @nawet/ds-cli test",
+    "test": "pnpm --filter @nawet/ds-core test && pnpm --filter @nawet/ds-react test && pnpm --filter @nawet/ds-react-ui-sdk test && pnpm --filter @nawet/ds-cli test",
     "env:generate": "varlock codegen --path ./apps/showcase/",
     "postinstall": "varlock codegen --path ./apps/showcase/",
     "clean:lockfile": "pnpm clean --lockfile && pnpm install",

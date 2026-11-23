@@ -124,3 +124,15 @@ Oxlint + Oxfmt will catch most mechanical issues automatically. Focus your atten
 ---
 
 Most formatting and common issues are automatically fixed by Oxlint + Oxfmt. Run `pnpm exec ultracite fix` before committing to ensure compliance.
+
+---
+
+## UI SDK
+
+`packages/react-ui-sdk` builds components on UI SDK (`@ui-sdk/react`, `@ui-sdk/core`).
+
+- Read `node_modules/@ui-sdk/react/docs/llms.txt` first, then the page for the component you touch, for example `docs/components/rating.md`.
+- For custom primitives, search `docs/core.md` by heading and read `docs/rendering.md` next to it.
+- UI SDK owns roles, IDs, ARIA state, roving focus, and `data-slot`. Style its parts through the `data-*` attributes it exposes; do not rename or duplicate them.
+- `packages/react-ui-sdk/src/styles.css` declares `@layer ui-sdk;` before the Tailwind import. Keep it there.
+- UI SDK theme variables (`--ui-*`) are mapped to Nawet tokens in that stylesheet. Add token mappings there rather than hard-coding colors in components.

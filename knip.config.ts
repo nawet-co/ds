@@ -73,8 +73,13 @@ const config: KnipConfig = {
       project: ["src/**/*.{ts,tsx}", "scripts/**/*.ts"],
     },
 
-    // Reserved Solid 2.0 implementation
-    "packages/solid": {
+    // React implementation on UI SDK
+    "packages/react-ui-sdk": {
+      project: ["src/**/*.{ts,tsx}"],
+    },
+
+    // Reserved Solid 2.0 implementation on UI SDK
+    "packages/solid-ui-sdk": {
       entry: ["src/index.ts"],
       project: ["src/**/*.{ts,tsx}"],
     },

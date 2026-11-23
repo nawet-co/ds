@@ -1,6 +1,6 @@
 # Nawet DS
 
-The official design system of Nawet Co. A framework-neutral core with a React implementation built on Base UI and Tailwind CSS v4.
+The official design system of Nawet Co. A framework-neutral core with React implementations on Base UI and UI SDK, plus Solid on UI SDK, all on Tailwind CSS v4.
 
 Components are adapted from [shadcn/ui](https://ui.shadcn.com/) (MIT). Nawet owns the design tokens, styling, motion, composition, and original components.
 
@@ -8,20 +8,22 @@ Components are adapted from [shadcn/ui](https://ui.shadcn.com/) (MIT). Nawet own
 
 ```text
 @nawet/ds-core            tokens, CSS, recipes, contracts
-@nawet/ds-react           React components, hooks, providers
-@nawet/ds-solid-ui-sdk    reserved for Solid 2.0 + UI SDK
+@nawet/ds-react           React components, hooks, providers (shadcn + Base UI)
+@nawet/ds-react-ui-sdk    React components on UI SDK
+@nawet/ds-solid-ui-sdk    reserved for Solid 2.0 on UI SDK
 @nawet/ds-cli             framework-aware installer and doctor
 ```
 
 Repository layout:
 
 ```text
-apps/showcase      documentation / preview app
-packages/core      design system core
-packages/react     React implementation
-packages/solid     reserved Solid implementation
-packages/cli       installer and doctor CLI
-infra              Alchemy deployment stack
+apps/showcase            documentation / preview app
+packages/core            design system core
+packages/react           React implementation (shadcn + Base UI)
+packages/react-ui-sdk    React implementation on UI SDK
+packages/solid-ui-sdk    reserved Solid 2.0 implementation on UI SDK
+packages/cli             installer and doctor CLI
+infra                    Alchemy deployment stack
 ```
 
 `@nawet/ds-core` does not depend on React or Solid. Framework packages own their components, hooks/signals, providers, primitives, Icons, and motion bindings.
