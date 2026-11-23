@@ -7,10 +7,10 @@ Components are adapted from [shadcn/ui](https://ui.shadcn.com/) (MIT). Nawet own
 ## Packages
 
 ```text
-@nawet/ds-core     tokens, CSS, recipes, contracts
-@nawet/ds-react    React components, hooks, providers
-@nawet/ds-solid    reserved for Solid 2.0
-@nawet/ds-cli      framework-aware installer and doctor
+@nawet/ds-core            tokens, CSS, recipes, contracts
+@nawet/ds-react           React components, hooks, providers
+@nawet/ds-solid-ui-sdk    reserved for Solid 2.0 + UI SDK
+@nawet/ds-cli             framework-aware installer and doctor
 ```
 
 Repository layout:

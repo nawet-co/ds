@@ -1,6 +1,6 @@
-# @nawet/ds-solid
+# @nawet/ds-solid-ui-sdk
 
-Reserved for the Solid 2.0 implementation of Nawet DS.
+Reserved for the Solid 2.0 implementation of Nawet DS, built on UI SDK.
 
 Intentionally empty. No primitives, dependencies, or component choices have been made yet. The package boundary exists so the framework-neutral core and the React implementation can evolve without leaking React assumptions.
 

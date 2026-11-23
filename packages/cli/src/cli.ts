@@ -24,6 +24,10 @@ program
   .argument("[directory]", "workspace directory (defaults to cwd)")
   .option("-c, --cwd <path>", "directory to scan", process.cwd())
   .option("-f, --framework <framework>", "react or solid")
+  .option(
+    "-i, --implementation <implementation>",
+    "base-ui (React) or ui-sdk (React and Solid)"
+  )
   .option("-p, --package-manager <manager>", "pnpm, npm, yarn, or bun")
   .option("-y, --yes", "skip confirmation prompts")
   .option("--dry-run", "print the plan without writing or installing")
@@ -37,6 +41,7 @@ program
         cwd: string;
         dryRun?: boolean;
         framework?: string;
+        implementation?: string;
         install?: boolean;
         packageManager?: string;
         yes?: boolean;
@@ -47,6 +52,7 @@ program
         cwd: path.resolve(options.cwd),
         dryRun: options.dryRun,
         framework: options.framework,
+        implementation: options.implementation,
         install: options.install,
         packageManager: options.packageManager,
         target: directory,
@@ -61,6 +67,10 @@ program
   .argument("[directory]", "workspace directory (defaults to cwd)")
   .option("-c, --cwd <path>", "directory to scan", process.cwd())
   .option("-f, --framework <framework>", "react or solid")
+  .option(
+    "-i, --implementation <implementation>",
+    "base-ui (React) or ui-sdk (React and Solid)"
+  )
   .option("-y, --yes", "skip confirmation prompts")
   .action(
     async (
@@ -68,12 +78,14 @@ program
       options: {
         cwd: string;
         framework?: string;
+        implementation?: string;
         yes?: boolean;
       }
     ) => {
       process.exitCode = await runDoctor({
         cwd: path.resolve(options.cwd),
         framework: options.framework,
+        implementation: options.implementation,
         target: directory,
         yes: options.yes,
       });

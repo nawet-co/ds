@@ -1,8 +1,20 @@
 import { cancel, isCancel, select } from "@clack/prompts";
 
 import { describeDetection, frameworkLabel } from "./detect.ts";
+import {
+  defaultImplementation,
+  implementationLabel,
+  implementationsFor,
+  isImplementation,
+  supportsImplementation,
+} from "./implementations.ts";
 import { detectPackageManager } from "./package-manager.ts";
-import type { Framework, PackageManager, WorkspaceTarget } from "./types.ts";
+import type {
+  Framework,
+  Implementation,
+  PackageManager,
+  WorkspaceTarget,
+} from "./types.ts";
 
 export class CancelledError extends Error {
   constructor(message = "Cancelled.") {
@@ -100,8 +112,7 @@ export const chooseFramework = async (
         value: "react",
       },
       {
-        disabled: true,
-        hint: "Coming after Solid 2.0 support lands",
+        hint: "No Solid dependency found",
         label: "Solid",
         value: "solid",
       }
@@ -112,6 +123,62 @@ export const chooseFramework = async (
     await select<Framework>({
       message: "Which framework should Nawet DS target?",
       options,
+    })
+  );
+};
+
+export const chooseImplementation = async (
+  framework: Framework,
+  explicit: string | undefined,
+  yes: boolean
+): Promise<Implementation> => {
+  const options = implementationsFor(framework);
+
+  // Solid only ships UI SDK, so there is nothing to ask.
+  if (options.length === 1) {
+    const [only] = options;
+
+    if (!only) {
+      throw new Error(`${frameworkLabel(framework)} has no implementation.`);
+    }
+
+    if (explicit && explicit !== only.implementation) {
+      throw new Error(
+        `${frameworkLabel(framework)} only supports ${implementationLabel(only.implementation)}.`
+      );
+    }
+
+    return only.implementation;
+  }
+
+  if (explicit) {
+    if (!isImplementation(explicit)) {
+      throw new Error(
+        `Unknown implementation "${explicit}". Use base-ui or ui-sdk.`
+      );
+    }
+
+    if (!supportsImplementation(framework, explicit)) {
+      throw new Error(
+        `${frameworkLabel(framework)} does not support ${implementationLabel(explicit)}.`
+      );
+    }
+
+    return explicit;
+  }
+
+  if (yes) {
+    return defaultImplementation(framework);
+  }
+
+  return ensure<Implementation>(
+    await select<Implementation>({
+      message: `Which implementation should ${frameworkLabel(framework)} use?`,
+      options: options.map((option) => ({
+        hint: option.hint,
+        label: option.label,
+        value: option.implementation,
+      })),
     })
   );
 };

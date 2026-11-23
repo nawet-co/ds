@@ -6,14 +6,29 @@ import { intro, log, note, outro } from "@clack/prompts";
 import pc from "picocolors";
 import { gte } from "semver";
 
-import { findCssEntry, hasStylesImport } from "../core/css.ts";
+import {
+  findCssEntry,
+  hasStylesImport,
+  hasUiSdkLayer,
+  uiSdkLayerPrecedesTailwind,
+} from "../core/css.ts";
 import { describeDetection, isFrameworkSupported } from "../core/detect.ts";
-import { chooseFramework, chooseTarget } from "../core/prompts.ts";
+import {
+  implementationLabel,
+  packageFor,
+  requiresUiSdkLayer,
+} from "../core/implementations.ts";
+import {
+  chooseFramework,
+  chooseImplementation,
+  chooseTarget,
+} from "../core/prompts.ts";
 import { resolveTarget } from "../core/workspaces.ts";
 
 export interface DoctorCommandOptions {
   cwd: string;
   framework?: string;
+  implementation?: string;
   target?: string;
   yes?: boolean;
 }
@@ -97,14 +112,19 @@ export const runDoctor = async (
     options.framework,
     Boolean(options.yes)
   );
+  const implementation = await chooseImplementation(
+    framework,
+    options.implementation,
+    Boolean(options.yes)
+  );
+  const packageName = packageFor(framework, implementation);
   const checks: Check[] = [];
-  const frameworkPackage = `@nawet/ds-${framework}`;
-  const frameworkVersion = await installedVersion(target.dir, frameworkPackage);
+  const frameworkVersion = await installedVersion(target.dir, packageName);
 
   if (frameworkVersion) {
-    add(checks, "success", `${frameworkPackage} ${frameworkVersion}`);
+    add(checks, "success", `${packageName} ${frameworkVersion}`);
   } else {
-    add(checks, "error", `${frameworkPackage} is not installed.`);
+    add(checks, "error", `${packageName} is not installed.`);
   }
 
   const coreVersion = await installedVersion(target.dir, "@nawet/ds-core");
@@ -165,14 +185,34 @@ export const runDoctor = async (
   const cssEntry = await findCssEntry(target.dir);
   if (cssEntry) {
     const content = await readFile(cssEntry, "utf-8");
-    if (hasStylesImport(content, framework)) {
+    if (hasStylesImport(content, packageName)) {
       add(checks, "success", `Styles imported in ${cssEntry}.`);
     } else {
       add(
         checks,
         "error",
-        `Add @import "@nawet/ds-${framework}/styles.css" to ${cssEntry}.`
+        `Add @import "${packageName}/styles.css" to ${cssEntry}.`
       );
+    }
+
+    if (requiresUiSdkLayer(implementation)) {
+      if (hasUiSdkLayer(content)) {
+        if (uiSdkLayerPrecedesTailwind(content)) {
+          add(checks, "success", "UI SDK cascade layer is declared first.");
+        } else {
+          add(
+            checks,
+            "error",
+            `Move @layer ui-sdk; above @import "tailwindcss" in ${cssEntry}.`
+          );
+        }
+      } else {
+        add(
+          checks,
+          "error",
+          `Add @layer ui-sdk; to the top of ${cssEntry} for UI SDK.`
+        );
+      }
     }
   } else {
     add(checks, "warn", "Could not find a Tailwind CSS entrypoint.");
@@ -194,10 +234,11 @@ export const runDoctor = async (
 
   note(
     [
-      `Target      ${target.name}`,
-      `Framework   ${describeDetection({ evidence: [], framework })}`,
-      `Detections  ${target.detections.map(describeDetection).join(", ") || "none"}`,
-      `Errors      ${errors}`,
+      `Target       ${target.name}`,
+      `Framework    ${describeDetection({ evidence: [], framework })}`,
+      `Behavior     ${implementationLabel(implementation)}`,
+      `Detections   ${target.detections.map(describeDetection).join(", ") || "none"}`,
+      `Errors       ${errors}`,
     ].join("\n"),
     "Result"
   );

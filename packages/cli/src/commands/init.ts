@@ -6,10 +6,16 @@ import pc from "picocolors";
 
 import { addStylesImport, findCssEntry, hasStylesImport } from "../core/css.ts";
 import { frameworkLabel, isFrameworkSupported } from "../core/detect.ts";
+import {
+  implementationLabel,
+  packageFor,
+  requiresUiSdkLayer,
+} from "../core/implementations.ts";
 import { installPackages } from "../core/install.ts";
 import { packageManagerLabel } from "../core/package-manager.ts";
 import {
   chooseFramework,
+  chooseImplementation,
   choosePackageManager,
   chooseTarget,
   ensure,
@@ -22,11 +28,17 @@ export interface InitCommandOptions {
   css?: boolean;
   dryRun?: boolean;
   framework?: string;
+  implementation?: string;
   install?: boolean;
   packageManager?: string;
   target?: string;
   yes?: boolean;
 }
+
+const minimumRuntime: Record<Framework, string> = {
+  react: "React 19+",
+  solid: "Solid 2.0+",
+};
 
 const validateTarget = (
   target: WorkspaceTarget,
@@ -44,13 +56,7 @@ const validateTarget = (
 
   if (detection && !isFrameworkSupported(framework, detection.version)) {
     throw new Error(
-      `${frameworkLabel(framework)} ${detection.version} is too old. Nawet DS requires ${framework === "react" ? "React 19+" : "Solid 2.0+"}.`
-    );
-  }
-
-  if (framework === "solid") {
-    throw new Error(
-      "@nawet/ds-solid is reserved for later. Solid 2.0 support is not implemented yet."
+      `${frameworkLabel(framework)} ${detection.version} is too old. Nawet DS requires ${minimumRuntime[framework]}.`
     );
   }
 };
@@ -79,12 +85,19 @@ export const runInit = async (options: InitCommandOptions): Promise<number> => {
 
   validateTarget(target, framework);
 
+  const implementation = await chooseImplementation(
+    framework,
+    options.implementation,
+    Boolean(options.yes)
+  );
+  const packageName = packageFor(framework, implementation);
+
   const manager = await choosePackageManager(
     target,
     options.packageManager,
     Boolean(options.yes)
   );
-  const packages = ["@nawet/ds-core", `@nawet/ds-${framework}`];
+  const packages = ["@nawet/ds-core", packageName];
   const cssEntry = await findCssEntry(target.dir);
 
   if (!options.yes) {
@@ -103,11 +116,12 @@ export const runInit = async (options: InitCommandOptions): Promise<number> => {
 
   note(
     [
-      `Target     ${target.name}`,
-      `Framework  ${frameworkLabel(framework)}`,
-      `Manager    ${packageManagerLabel(manager)}`,
-      `Packages   ${packages.join(", ")}`,
-      `CSS        ${cssEntry ? path.relative(target.dir, cssEntry) : "not detected"}`,
+      `Target       ${target.name}`,
+      `Framework    ${frameworkLabel(framework)}`,
+      `Behavior     ${implementationLabel(implementation)}`,
+      `Manager      ${packageManagerLabel(manager)}`,
+      `Packages     ${packages.join(", ")}`,
+      `CSS          ${cssEntry ? path.relative(target.dir, cssEntry) : "not detected"}`,
     ].join("\n"),
     "Install plan"
   );
@@ -136,32 +150,37 @@ export const runInit = async (options: InitCommandOptions): Promise<number> => {
   if (options.css !== false) {
     if (cssEntry) {
       const content = await readFile(cssEntry, "utf-8");
+      const next = addStylesImport(content, {
+        packageName,
+        selection: { framework, implementation },
+      });
 
-      if (hasStylesImport(content, framework)) {
+      if (next === content) {
         log.success(`Styles already imported in ${cssEntry}.`);
       } else {
-        const add = options.yes
-          ? true
-          : ensure(
-              await confirm({
-                initialValue: true,
-                message: `Add @nawet/ds-${framework}/styles.css to ${cssEntry}?`,
-              })
-            );
+        const add =
+          hasStylesImport(content, packageName) || options.yes
+            ? true
+            : ensure(
+                await confirm({
+                  initialValue: true,
+                  message: `Add @import "${packageName}/styles.css" to ${cssEntry}?`,
+                })
+              );
 
         if (add) {
-          await writeFile(
-            cssEntry,
-            addStylesImport(content, framework),
-            "utf-8"
-          );
+          await writeFile(cssEntry, next, "utf-8");
           log.success(`Updated ${cssEntry}.`);
         }
       }
     } else {
       log.warn("Could not find a Tailwind CSS entrypoint.");
       note(
-        `@import "tailwindcss";\n@import "@nawet/ds-${framework}/styles.css";`,
+        [
+          ...(requiresUiSdkLayer(implementation) ? ["@layer ui-sdk;", ""] : []),
+          `@import "tailwindcss";`,
+          `@import "${packageName}/styles.css";`,
+        ].join("\n"),
         "Add this to your global CSS"
       );
     }

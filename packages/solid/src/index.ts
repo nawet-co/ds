@@ -1,2 +1,2 @@
-// Reserved for the @nawet/ds-solid Solid 2.0 implementation.
+// Reserved for the @nawet/ds-solid-ui-sdk Solid 2.0 implementation.
 export {};

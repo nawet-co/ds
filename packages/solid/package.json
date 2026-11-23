@@ -1,8 +1,8 @@
 {
-  "name": "@nawet/ds-solid",
+  "name": "@nawet/ds-solid-ui-sdk",
   "version": "0.0.0",
   "private": true,
-  "description": "Reserved for the Nawet Design System Solid 2.0 implementation.",
+  "description": "Nawet Design System Solid 2.0 implementation on UI SDK.",
   "license": "MIT",
   "type": "module",
   "exports": {

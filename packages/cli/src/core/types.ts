@@ -1,5 +1,23 @@
 export type Framework = "react" | "solid";
 
+/**
+ * The behavior layer a framework implementation is built on.
+ *
+ * Solid only ships one: `ui-sdk`.
+ */
+export type Implementation = "base-ui" | "ui-sdk";
+
+export interface ImplementationOption {
+  hint: string;
+  implementation: Implementation;
+  label: string;
+}
+
+export interface FrameworkSelection {
+  framework: Framework;
+  implementation: Implementation;
+}
+
 export type PackageManager = "pnpm" | "npm" | "yarn" | "bun";
 
 export interface PackageJson {

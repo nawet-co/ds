@@ -3,7 +3,8 @@ import path from "node:path";
 
 import { glob } from "tinyglobby";
 
-import type { Framework } from "./types.ts";
+import { requiresUiSdkLayer } from "./implementations.ts";
+import type { FrameworkSelection } from "./types.ts";
 
 const commonCssEntries = [
   "src/styles/global.css",
@@ -15,8 +16,8 @@ const commonCssEntries = [
   "src/app/globals.css",
 ];
 
-const importLine = (framework: Framework): string =>
-  `@import "@nawet/ds-${framework}/styles.css";`;
+const TAILWIND_IMPORT = /@import\s+["']tailwindcss["'];?/u;
+const UI_SDK_LAYER = /@layer\s+ui-sdk\s*;/u;
 
 const exists = async (file: string): Promise<boolean> => {
   try {
@@ -55,33 +56,69 @@ export const findCssEntry = async (
     }))
   );
 
-  return contents.find(({ content }) =>
-    /@import\s+["']tailwindcss["']/u.test(content)
-  )?.file;
+  return contents.find(({ content }) => TAILWIND_IMPORT.test(content))?.file;
 };
 
 export const hasStylesImport = (
   content: string,
-  framework: Framework
-): boolean => content.includes(`@nawet/ds-${framework}/styles.css`);
+  packageName: string
+): boolean => content.includes(`${packageName}/styles.css`);
 
-export const addStylesImport = (
-  content: string,
-  framework: Framework
-): string => {
-  const line = importLine(framework);
+export const hasUiSdkLayer = (content: string): boolean =>
+  UI_SDK_LAYER.test(content);
 
-  if (hasStylesImport(content, framework)) {
+/**
+ * UI SDK declares its cascade layer above Tailwind. The layer statement must
+ * come first so Tailwind's layers resolve after it.
+ */
+export const uiSdkLayerPrecedesTailwind = (content: string): boolean => {
+  const layerIndex = content.search(UI_SDK_LAYER);
+
+  if (layerIndex === -1) {
+    return false;
+  }
+
+  const tailwindIndex = content.search(TAILWIND_IMPORT);
+
+  return tailwindIndex === -1 || layerIndex < tailwindIndex;
+};
+
+const ensureUiSdkLayer = (content: string): string => {
+  if (uiSdkLayerPrecedesTailwind(content)) {
     return content;
   }
 
-  const tailwindImport = /@import\s+["']tailwindcss["'];?/u.exec(content);
+  // Drop an existing statement so it can be hoisted above Tailwind.
+  const withoutLayer = content.replace(UI_SDK_LAYER, "").trimStart();
+
+  return `@layer ui-sdk;\n\n${withoutLayer}`;
+};
+
+export interface StylesTarget {
+  packageName: string;
+  selection: FrameworkSelection;
+}
+
+export const addStylesImport = (
+  content: string,
+  { packageName, selection }: StylesTarget
+): string => {
+  const withLayer = requiresUiSdkLayer(selection.implementation)
+    ? ensureUiSdkLayer(content)
+    : content;
+  const line = `@import "${packageName}/styles.css";`;
+
+  if (hasStylesImport(withLayer, packageName)) {
+    return withLayer;
+  }
+
+  const tailwindImport = TAILWIND_IMPORT.exec(withLayer);
 
   if (tailwindImport) {
     const index = (tailwindImport.index ?? 0) + tailwindImport[0].length;
 
-    return `${content.slice(0, index)}\n${line}${content.slice(index)}`;
+    return `${withLayer.slice(0, index)}\n${line}${withLayer.slice(index)}`;
   }
 
-  return `${line}\n${content}`;
+  return `${line}\n${withLayer}`;
 };
